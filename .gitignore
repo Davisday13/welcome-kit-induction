@@ -1,0 +1,17 @@
+# Copias temporales que genera build_deck.py cuando el .pptx está abierto
+_build.pptx
+Induction_Project_Davis_Fernandez.pptx
+
+# Ofice
+~$*
+*.tmp
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Sistema
+.DS_Store
+Thumbs.db
