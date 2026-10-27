@@ -18,13 +18,30 @@ en **web**, más su PDF.
 | `F` | Pantalla completa |
 | `P` | Exportar a PDF (imprimir → *Guardar como PDF*) |
 
+## 🎨 Diseño
+
+Estilo **creativo geométrico**: bloques de color sólido (coral `#FF5A3C`, turquesa `#0FB9A6`,
+amarillo `#FFC53D`, azul `#3D6BFF`), tipografía negra de alto contraste, contornos de 2px y sombras
+sólidas desplazadas (efecto cartel/risografía), chips-píldora para los rótulos, números en cuadros de
+color y un mapa ilustrado con la ruta perfilada en negro.
+
+| Diapositiva | Recursos gráficos |
+|---|---|
+| 1 · Portada | Círculo coral, círculo turquesa, triángulo amarillo, título con resaltado amarillo y barra multicolor a rayas |
+| 2 · About me | 4 tarjetas con contorno y sombra dura, badges cuadrados de color, franja de rutina en negro con sombra turquesa |
+| 3 · How to get there | Tarjeta negra con sombra coral, pasos numerados en 4 colores, mapa ilustrado con ruta perfilada |
+| 4 · Office & safety | Tarjetas de color pleno (coral/turquesa/negro), chips *Yesterday* / *Tomorrow*, bloque 911 gigante |
+
+Todas las decisiones de color cumplen contraste AA/AAA sobre su fondo: el texto siempre es negro
+sobre color y blanco sobre negro.
+
 ## 📁 Archivos del repositorio
 
 | Archivo | Qué es |
 |---|---|
 | [`Induction_Project_Davis_Fernandez_FINAL.pptx`](Induction_Project_Davis_Fernandez_FINAL.pptx) | **Entregable 1** — 4 diapositivas (16:9) con notas del orador. **340 palabras visibles**. |
 | [`Welcome_Kit_Escrito_Davis_Fernandez.docx`](Welcome_Kit_Escrito_Davis_Fernandez.docx) | **Entregable 2** — parte escrita. **338 palabras** (rango 250–350). |
-| [`Welcome_Kit_Davis_Fernandez.pdf`](Welcome_Kit_Davis_Fernandez.pdf) | **Entregable 3** — la presentación exportada a PDF (4 páginas, lista para Classroom). |
+| [`Welcome_Kit_Davis_Fernandez.pdf`](Welcome_Kit_Davis_Fernandez.pdf) | **Entregable 3** — la misma presentación web exportada a PDF (4 páginas, lista para Classroom). |
 | [`Guia_Induction_Project.docx`](Guia_Induction_Project.docx) | Guía de calificación: checklist de la rúbrica, datos pendientes y cronometraje. |
 | [`index.html`](index.html) | **Versión web** de la misma presentación (autocontenida, sin librerías externas). |
 | [`build_deck.py`](build_deck.py) / [`build_word.py`](build_word.py) / [`build_guia.py`](build_guia.py) | Scripts que generan los tres documentos. |
@@ -65,7 +82,9 @@ python build_guia.py     # → Guia_Induction_Project.docx
 ```
 
 `build_deck.py` guarda en `_build.pptx` si el archivo está abierto en PowerPoint; ciérralo y vuelve a
-ejecutar. El PDF se exporta desde PowerPoint: **Guardar como → PDF** (o desde `index.html` con la tecla `P`).
+ejecutar. El PDF de la presentación **web** se genera con `Ctrl+P` sobre `index.html` → *Guardar como
+PDF*, papel **13.333 × 7.5 in**, márgenes **ninguno**, marcar **gráficos de fondo** (en la web la tecla
+`P` hace lo mismo). También se puede exportar el `.pptx` desde PowerPoint → *Guardar como → PDF*.
 
 La versión web no tiene dependencias: es un solo archivo `index.html`. Para probarla en local:
 
