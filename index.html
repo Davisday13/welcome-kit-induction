@@ -223,6 +223,75 @@
   #notes.open{transform:none}
   #notes h4{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
 
+  /* ---------- motion ---------- */
+  @keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+  @keyframes slide-r{from{opacity:0;transform:translateX(30px)}to{opacity:1;transform:none}}
+  @keyframes slide-l{from{opacity:0;transform:translateX(-30px)}to{opacity:1;transform:none}}
+  @keyframes zoom-in{from{opacity:0;transform:scale(.7)}to{opacity:1;transform:none}}
+  @keyframes pop{from{opacity:0;transform:scale(0)}to{opacity:1;transform:none}}
+  @keyframes draw{from{stroke-dashoffset:1000}to{stroke-dashoffset:0}}
+
+  .slide{pointer-events:none}
+  .slide.active{pointer-events:auto}
+  .slide.exit-l{visibility:visible;opacity:0;transform:translateX(-56px)}
+  .slide.exit-r{visibility:visible;opacity:0;transform:translateX(56px)}
+
+  /* barrido de color entre diapositivas */
+  #wipe{
+    position:absolute;inset:0;z-index:15;pointer-events:none;visibility:hidden;
+    background:var(--accent);clip-path:inset(0 100% 0 0);
+    transition:clip-path .34s cubic-bezier(.76,0,.24,1);
+  }
+  #wipe::after{content:"";position:absolute;top:0;right:0;bottom:0;width:16px;background:var(--sun)}
+  #wipe.sweep{visibility:visible;clip-path:inset(0 0 0 0)}
+  #wipe.out{visibility:visible;clip-path:inset(0 0 0 100%)}
+
+  /* entrada escalonada por bloque */
+  .slide.active .kicker{animation:rise .5s cubic-bezier(.2,.8,.25,1) both .06s}
+  .slide.active .title{animation:rise .55s cubic-bezier(.2,.8,.25,1) both .12s}
+  .slide.active .rule{animation:slide-l .5s cubic-bezier(.2,.8,.25,1) both .2s}
+
+  /* portada */
+  .slide.active.s1 .halo{animation:zoom-in .7s cubic-bezier(.2,.9,.3,1) both .05s}
+  .slide.active.s1 .halo-b{animation-delay:.16s}
+  .slide.active.s1 .halo-c{animation-delay:.24s}
+  .slide.active.s1 h1{animation:rise .6s cubic-bezier(.2,.85,.3,1) both .2s}
+  .slide.active.s1 .name{animation:rise .5s cubic-bezier(.2,.8,.25,1) both .44s}
+  .slide.active.s1 .role{animation:rise .5s cubic-bezier(.2,.8,.25,1) both .52s}
+  .slide.active.s1 .meta{animation:rise .5s cubic-bezier(.2,.8,.25,1) both .6s}
+  .slide.active.s1 .bar{animation:slide-l .55s cubic-bezier(.2,.8,.25,1) both .3s}
+
+  /* tarjetas y bloques */
+  .slide.active .cards .card{animation:rise .55s cubic-bezier(.2,.8,.25,1) both}
+  .slide.active .cards .card:nth-child(1){animation-delay:.26s}
+  .slide.active .cards .card:nth-child(2){animation-delay:.33s}
+  .slide.active .cards .card:nth-child(3){animation-delay:.40s}
+  .slide.active .cards .card:nth-child(4){animation-delay:.47s}
+  .slide.active .routine{animation:rise .6s cubic-bezier(.2,.8,.25,1) both .55s}
+
+  /* ruta + mapa */
+  .slide.active .addr{animation:slide-l .55s cubic-bezier(.2,.8,.25,1) both .26s}
+  .slide.active .steps-title{animation:rise .5s cubic-bezier(.2,.8,.25,1) both .34s}
+  .slide.active .stp:nth-child(1){animation:rise .45s cubic-bezier(.2,.8,.25,1) both .40s}
+  .slide.active .stp:nth-child(2){animation:rise .45s cubic-bezier(.2,.8,.25,1) both .46s}
+  .slide.active .stp:nth-child(3){animation:rise .45s cubic-bezier(.2,.8,.25,1) both .52s}
+  .slide.active .stp:nth-child(4){animation:rise .45s cubic-bezier(.2,.8,.25,1) both .58s}
+  .slide.active .map-wrap{animation:slide-r .6s cubic-bezier(.2,.8,.25,1) both .30s}
+  .slide.active .map-cap{animation:rise .5s cubic-bezier(.2,.8,.25,1) both .62s}
+  .route{stroke-dasharray:1000;stroke-dashoffset:1000}
+  .slide.active .route{animation:draw .95s cubic-bezier(.55,.15,.3,1) both .45s}
+  .mk1,.mk2{transform-box:fill-box;transform-origin:center}
+  .slide.active .mk1{animation:pop .4s cubic-bezier(.2,1.6,.4,1) both .35s}
+  .slide.active .mk2{animation:pop .4s cubic-bezier(.2,1.6,.4,1) both 1.25s}
+
+  /* diapositiva 4 */
+  .slide.active .row-top .card:nth-child(1){animation:rise .55s cubic-bezier(.2,.8,.25,1) both .26s}
+  .slide.active .row-top .card:nth-child(2){animation:rise .55s cubic-bezier(.2,.8,.25,1) both .34s}
+  .slide.active .safety-k{animation:rise .5s cubic-bezier(.2,.8,.25,1) both .44s}
+  .slide.active .row-bot .card:nth-child(1){animation:rise .55s cubic-bezier(.2,.8,.25,1) both .50s}
+  .slide.active .row-bot .card:nth-child(2){animation:rise .55s cubic-bezier(.2,.8,.25,1) both .57s}
+  .slide.active .row-bot .card:nth-child(3){animation:rise .55s cubic-bezier(.2,.8,.25,1) both .64s}
+
   /* ---------- print to PDF ---------- */
   @page{size:13.333in 7.5in;margin:0}
   @media print{
@@ -233,10 +302,14 @@
     .slide{position:relative;opacity:1!important;visibility:visible!important;transform:none!important;
            width:1280px;height:720px;overflow:hidden;page-break-after:always;break-after:page}
     .slide:last-of-type{page-break-after:auto;break-after:auto}
-    #dots,#hint,#notes{display:none!important}
+    .slide *{animation:none!important;transition:none!important}
+    .route{stroke-dasharray:none!important;stroke-dashoffset:0!important}
+    #dots,#hint,#notes,#wipe{display:none!important}
   }
   @media (prefers-reduced-motion:reduce){
-    .slide,#notes{transition:none}
+    .slide,#notes,#wipe{transition:none}
+    #wipe{display:none}
+    .slide *{animation:none!important}
   }
 </style>
 </head>
@@ -352,12 +425,12 @@
           <rect x="700" y="194" width="85" height="48" rx="6" fill="#3D6BFF" stroke="#12131A" stroke-width="3"/>
 
           <!-- route -->
-          <polyline points="140,580 552,536 615,155 775,128" fill="none" stroke="#12131A" stroke-width="14" stroke-linejoin="round" stroke-linecap="round"/>
-          <polyline points="140,580 552,536 615,155 775,128" fill="none" stroke="#FF5A3C" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+          <polyline class="route" points="140,580 552,536 615,155 775,128" fill="none" stroke="#12131A" stroke-width="14" stroke-linejoin="round" stroke-linecap="round"/>
+          <polyline class="route" points="140,580 552,536 615,155 775,128" fill="none" stroke="#FF5A3C" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
 
           <!-- markers -->
-          <circle cx="140" cy="580" r="9" fill="#12131A" stroke="#fff" stroke-width="3"/>
-          <circle cx="775" cy="128" r="9" fill="#FFC53D" stroke="#12131A" stroke-width="4"/>
+          <circle class="mk1" cx="140" cy="580" r="9" fill="#12131A" stroke="#fff" stroke-width="3"/>
+          <circle class="mk2" cx="775" cy="128" r="9" fill="#FFC53D" stroke="#12131A" stroke-width="4"/>
 
           <!-- labels -->
           <g font-family="Segoe UI, system-ui, sans-serif" text-anchor="middle">
@@ -428,6 +501,7 @@
       <div class="num">04</div>
     </section>
 
+    <div id="wipe" aria-hidden="true"></div>
   </div>
 </div>
 
@@ -449,28 +523,59 @@
     const b = document.createElement('button');
     b.type = 'button';
     b.setAttribute('aria-label', 'Go to slide ' + (i + 1));
-    b.addEventListener('click', () => go(i));
+    b.addEventListener('click', () => goTo(i));
     dots.appendChild(b);
   });
   const dotEls = Array.from(dots.children);
 
+  const wipe = document.getElementById('wipe');
+  let wiping = false;
+  let pending = null;
+
   function go(n, push) {
-    current = (n + slides.length) % slides.length;
-    slides.forEach((s, i) => s.classList.toggle('active', i === current));
+    const from = current;
+    const L = slides.length;
+    current = ((n % L) + L) % L;
+    const dir = (((current - from) + L) % L) <= L / 2 ? 1 : -1;
+    slides.forEach((s, i) => {
+      s.classList.remove('active', 'exit-l', 'exit-r');
+      if (i === current) s.classList.add('active');
+      else if (i === from) s.classList.add(dir > 0 ? 'exit-l' : 'exit-r');
+    });
     dotEls.forEach((d, i) => d.classList.toggle('on', i === current));
     notesText.textContent = slides[current].dataset.notes || '';
     if (push !== false) history.replaceState(null, '', '#' + (current + 1));
   }
 
-  function next(){ go(current + 1); }
-  function prev(){ go(current - 1); }
+  function goTo(n, push) {
+    const L = slides.length;
+    const target = ((n % L) + L) % L;
+    if (target === current) return;
+    if (wiping) { pending = { n: target, push }; return; }
+    wiping = true;
+    wipe.classList.remove('out');
+    wipe.classList.add('sweep');
+    setTimeout(() => {
+      go(target, push);
+      wipe.classList.remove('sweep');
+      wipe.classList.add('out');
+    }, 340);
+    setTimeout(() => {
+      wipe.classList.remove('out');
+      wiping = false;
+      if (pending) { const p = pending; pending = null; go(p.n, p.push); }
+    }, 740);
+  }
+
+  function next(){ goTo(current + 1); }
+  function prev(){ goTo(current - 1); }
 
   document.addEventListener('keydown', (e) => {
     if (['ArrowRight','ArrowDown','PageDown',' ','Enter'].includes(e.key)) { e.preventDefault(); next(); }
     else if (['ArrowLeft','ArrowUp','PageUp','Backspace'].includes(e.key)) { e.preventDefault(); prev(); }
-    else if (e.key === 'Home') go(0);
-    else if (e.key === 'End') go(slides.length - 1);
-    else if (/^[1-4]$/.test(e.key)) go(parseInt(e.key, 10) - 1);
+    else if (e.key === 'Home') goTo(0);
+    else if (e.key === 'End') goTo(slides.length - 1);
+    else if (/^[1-4]$/.test(e.key)) goTo(parseInt(e.key, 10) - 1);
     else if (e.key.toLowerCase() === 'n') notes.classList.toggle('open');
     else if (e.key.toLowerCase() === 'f') toggleFullscreen();
     else if (e.key.toLowerCase() === 'p') { e.preventDefault(); window.print(); }

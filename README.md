@@ -35,6 +35,19 @@ color y un mapa ilustrado con la ruta perfilada en negro.
 Todas las decisiones de color cumplen contraste AA/AAA sobre su fondo: el texto siempre es negro
 sobre color y blanco sobre negro.
 
+## 🎬 Transiciones y animaciones
+
+| Momento | Qué pasa |
+|---|---|
+| **Cambiar de diapositiva** | Barrido de color coral con borde amarillo que cruza el escenario (340 ms); la diapositiva anterior sale hacia el lado por el que viajas y la nueva entra |
+| **Al llegar a cada diapositiva** | Entrada escalonada de bloques: *chip* → título → regla tricolor → tarjetas una a una → bloque inferior (60–80 ms de retraso, curva `cubic-bezier`) |
+| **Portada** | Círculos y triángulo con zoom, título con resaltado, nombre/rol/mensaje apareciendo en orden y barra multicolor deslizándose |
+| **Mapa (diapositiva 3)** | La **ruta naranja se dibuja sola** de La Riviera a PikTa; los marcadores *MY BASE* y *PIKTA* aparecen al llegar |
+| **Detalles** | Puntos de navegación cuadrados que crecen, cajón de notas que sube, pista que se oculta sola |
+| **Accesibilidad** | Todo se desactiva con `prefers-reduced-motion`; el PDF se exporta con las animaciones apagadas |
+
+Atajos: `←` `→` navegar · `N` notas · `F` pantalla completa · `P` imprimir/PDF.
+
 ## 📁 Archivos del repositorio
 
 | Archivo | Qué es |
