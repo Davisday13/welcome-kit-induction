@@ -148,6 +148,7 @@
     border:2px solid var(--navy);box-shadow:7px 7px 0 var(--navy);
   }
   .map-wrap svg{width:100%;height:100%;display:block}
+  .map-wrap img{width:100%;height:100%;object-fit:contain;background:#F2EFE9;display:block}
   .map-cap{position:absolute;left:538px;top:654px;width:661px;font-size:12px;font-style:italic;color:var(--muted)}
 
   /* ---------- slide 4 ---------- */
@@ -318,7 +319,7 @@
   <div id="stage">
 
     <!-- ============ 1 ============ -->
-    <section class="slide s1 dark active" data-notes="Good morning, everyone. My name is Davis Fernandez and I am an independent IT technician. Thank you for the warm welcome. Today I am going to present my welcome kit for a new colleague from another country. I will talk about four things: who I am and my routine, how to get to my workplace, the places to eat near my office, and the safety rules I use when I visit clients all over Chiriqui. It will take about five minutes, and at the end you can ask me questions.">
+    <section class="slide s1 dark active" data-notes="Good morning, everyone. My name is Davis Fernández and I am an independent IT technician. Thank you for the warm welcome. Today I am going to present my welcome kit for a new colleague from another country. I will talk about four things: who I am and what my routine is, how to get to my workplace, the places to eat near my office, and the safety rules I use when I visit clients all over Chiriquí. It will take about five minutes, and at the end you can ask me questions.">
       <div class="halo halo-a"></div>
       <div class="halo halo-b"></div>
       <div class="halo halo-c"></div>
@@ -331,7 +332,7 @@
     </section>
 
     <!-- ============ 2 ============ -->
-    <section class="slide s2" data-notes="Let me start with me. My name is Davis Fernandez and I am an independent IT technician. I am friendly and organized, and I am a little shy, so please be patient with me at the beginning. I do not work in one office all day: I visit clients all over Chiriqui province, and my base is in La Riviera, in David. My main client is Restaurante PikTa. My schedule is from eight in the morning to five in the afternoon, Monday to Friday. This week I am setting up a new network and I am visiting clients in Bugaba and Boquete. My daily routine is like this. At eight o'clock I check my messages and I plan the visits. Then, from ten to four, I visit clients and I fix their equipment. At four thirty I update the tickets and I plan tomorrow.">
+    <section class="slide s2" data-notes="Let me start by telling you about myself. My name is Davis Fernández and I am an independent IT technician. I am friendly and organized, and I am a little shy, so please be patient with me at the beginning. I do not work in one office all day: I visit clients all over Chiriquí province, and my base is in La Riviera, in David. My main client is Restaurante PikTa. My schedule is from eight in the morning to five in the afternoon, Monday to Friday. This week I am setting up a new network and I am visiting clients in Bugaba and Boquete. My daily routine is like this. At eight o'clock I check my messages and I plan the visits. Then, from ten to four, I visit clients and I fix their equipment. At four thirty I update the tickets and I plan tomorrow's visits.">
       <div class="kicker">About me</div>
       <h2 class="title">This is me, my work and my week</h2>
       <div class="rule"></div>
@@ -376,7 +377,7 @@
     </section>
 
     <!-- ============ 3 ============ -->
-    <section class="slide s3" data-notes="Now, how to get to my workplace. My base is in La Riviera, on Calle five, but I do not stay there all day: my main client is Restaurante PikTa, on Calle Aristides Romero, and I also visit clients in Bugaba, Boquete and Volcan. On the map, the orange line is the route from my base to PikTa. First, I leave my base and I go east on Calle five. Then, I turn left on Calle four. After that, I go north to Calle Aristides Romero. Finally, I turn right, and PikTa is there, near Ozaga Market. It takes about five minutes by car. When I work in the restaurant, I park on the street behind the building. My advice is to leave early, because the traffic is heavy at eight in the morning.">
+    <section class="slide s3" data-notes="Now, let me tell you how to get to my workplace. My base is in La Riviera, on Calle 5, but I do not stay there all day: my main client is Restaurante PikTa, on Calle Arístides Romero, and I also visit clients in Bugaba, Boquete and Volcán. On the map, the blue line is the route from my base to PikTa. First, I leave my base and I go toward Ruta David-Querévalo, Carretera 48. Then, I continue on Carretera 48 and Avenida 8a Oeste, also called Avenida La Libertad. After that, I go straight until Calle Arístides Romero. Finally, I turn left, and PikTa is on the left, next to Hospital Chiriquí. It takes about ten minutes by car, about five kilometers. When I work in the restaurant, I park on the street behind the building. My advice is to leave early, because the traffic is heavy at eight in the morning.">
       <div class="kicker">How to get there</div>
       <h2 class="title">How to get to my workplace</h2>
       <div class="rule"></div>
@@ -391,70 +392,24 @@
 
         <div class="steps-title">By car · step by step</div>
         <div class="steps">
-          <div class="stp"><div class="n">1</div><p><strong>First,</strong> leave my base and go east on Calle 5.</p></div>
-          <div class="stp"><div class="n">2</div><p><strong>Then,</strong> turn left on Calle 4.</p></div>
-          <div class="stp"><div class="n">3</div><p><strong>After that,</strong> go north to Calle Arístides Romero.</p></div>
-          <div class="stp"><div class="n">4</div><p><strong>Finally,</strong> turn right; PikTa is near Ozaga Market.</p></div>
+          <div class="stp"><div class="n">1</div><p><strong>First,</strong> leave my base and go toward Carretera 48.</p></div>
+          <div class="stp"><div class="n">2</div><p><strong>Then,</strong> continue on Carretera 48 and Av. 8a Oeste.</p></div>
+          <div class="stp"><div class="n">3</div><p><strong>After that,</strong> go straight until Calle Arístides Romero.</p></div>
+          <div class="stp"><div class="n">4</div><p><strong>Finally,</strong> turn left; PikTa is on the left, next to Hospital Chiriquí.</p></div>
         </div>
       </div>
 
       <div class="map-wrap">
-        <svg viewBox="0 0 1000 646" role="img" aria-label="Map from La Riviera to Restaurante PikTa in David, Chiriquí">
-          <rect x="0" y="0" width="1000" height="646" rx="14" fill="#FFFCF6"/>
-          <!-- blocks -->
-          <g stroke="#12131A" stroke-opacity=".14" stroke-width="3">
-            <rect x="20" y="478" width="300" height="90" rx="6" fill="#BDEDE6"/>
-            <rect x="360" y="355" width="160" height="84" rx="6" fill="#FFE1D8"/>
-            <rect x="300" y="581" width="180" height="52" rx="6" fill="#FFEFC7"/>
-            <rect x="40" y="65" width="140" height="129" rx="6" fill="#FFEFC7"/>
-            <rect x="220" y="39" width="160" height="97" rx="6" fill="#DCE4FF"/>
-            <rect x="520" y="32" width="160" height="90" rx="6" fill="#BDEDE6"/>
-            <rect x="820" y="194" width="140" height="90" rx="6" fill="#FFE1D8"/>
-            <rect x="860" y="400" width="120" height="78" rx="6" fill="#DCE4FF"/>
-            <rect x="600" y="400" width="130" height="78" rx="6" fill="#FFEFC7"/>
-          </g>
-
-          <!-- roads -->
-          <g stroke="#FFFFFF" stroke-linecap="butt">
-            <line x1="0" y1="258" x2="1000" y2="90" stroke-width="74"/>
-            <line x1="0" y1="594" x2="860" y2="504" stroke-width="61"/>
-            <line x1="552" y1="536" x2="615" y2="155" stroke-width="48"/>
-          </g>
-
-          <!-- Ozaga market -->
-          <rect x="700" y="194" width="85" height="48" rx="6" fill="#3D6BFF" stroke="#12131A" stroke-width="3"/>
-
-          <!-- route -->
-          <polyline class="route" points="140,580 552,536 615,155 775,128" fill="none" stroke="#12131A" stroke-width="14" stroke-linejoin="round" stroke-linecap="round"/>
-          <polyline class="route" points="140,580 552,536 615,155 775,128" fill="none" stroke="#FF5A3C" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
-
-          <!-- markers -->
-          <circle class="mk1" cx="140" cy="580" r="9" fill="#12131A" stroke="#fff" stroke-width="3"/>
-          <circle class="mk2" cx="775" cy="128" r="9" fill="#FFC53D" stroke="#12131A" stroke-width="4"/>
-
-          <!-- labels -->
-          <g font-family="Segoe UI, system-ui, sans-serif" text-anchor="middle">
-            <text x="170" y="512" font-size="13" font-weight="700" fill="#0B6B60" letter-spacing=".06em">LA RIVERA</text>
-            <text x="300" y="272" font-size="14" font-weight="700" fill="#12131A" letter-spacing=".08em">C. ARÍSTIDES ROMERO</text>
-            <text x="500" y="497" font-size="13" font-weight="700" fill="#12131A">C. 5</text>
-            <text x="668" y="352" font-size="13" font-weight="700" fill="#12131A">C. 4</text>
-            <text x="742" y="270" font-size="12" font-weight="700" fill="#1B3FA8">OZAGA MARKET</text>
-            <text x="775" y="162" font-size="13" font-weight="800" fill="#B3311A" letter-spacing=".08em">PIKTA</text>
-            <text x="140" y="608" font-size="13" font-weight="800" fill="#12131A" letter-spacing=".06em">MY BASE</text>
-          </g>
-          <!-- compass -->
-          <circle cx="930" cy="549" r="17" fill="#FFC53D" stroke="#12131A" stroke-width="3"/>
-          <text x="930" y="555" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="13" font-weight="800" fill="#12131A">N</text>
-        </svg>
+        <img class="map-img" src="mapa-pikta.png" alt="Google Maps screenshot: route from Urb. La Riviera to Restaurante PikTa, next to Hospital Chiriquí, in David">
       </div>
-      <div class="map-cap">From my base in La Riviera to PikTa · 5 minutes by car</div>
+      <div class="map-cap">From my base in La Riviera to PikTa · 10 minutes by car · 5 km</div>
 
       <div class="foot">Induction Project · Davis Fernández</div>
       <div class="num">03</div>
     </section>
 
     <!-- ============ 4 ============ -->
-    <section class="slide s4" data-notes="This last slide is about the office and about safety. There are a lot of places to eat near my office. The bakery on the corner is cheap: coffee, bread and fruit for about two dollars. The market is also good: a typical lunch is rice with chicken, beans and plantain for about five dollars. Some places are expensive and many people eat at the market, but I do not have much time, so I usually eat near the office. And this was my week: yesterday I finished work and I went to dinner with my family. Tomorrow I will have a long day: I will visit three clients in David, Bugaba and Boquete, so I will leave home very early. Now, safety. The emergency number is 911. I have the first-aid kit in my car, in a red box, and I have the key. If someone is bleeding, apply pressure and call 911. Finally, three simple rules: check the car before a long trip, share your route with your family, and back up your data before every visit. Thank you very much. Do you have any questions?">
+    <section class="slide s4" data-notes="This last slide is about the office and safety. There are a lot of places to eat near my office. The bakery on the corner is cheap: coffee, bread and fruit for about two dollars. The market is also good: a typical lunch is rice with chicken, beans and plantain for about five dollars. Some places are expensive and many people eat at the market, but I do not have much time, so I usually eat near the office. And this was my week: yesterday I finished work and I went to dinner with my family. Tomorrow I will have a long day: I will visit three clients in David, Bugaba and Boquete, so I will leave home very early. Now, safety. The emergency number is 911. I keep the first-aid kit in my car, in a red box, and I have the key. If someone is bleeding, apply pressure and call 911. Finally, three simple rules: check the car before a long trip, share your route with your family, and back up your data before every visit. Thank you very much. Do you have any questions?">
       <div class="kicker">Around the office · Safety first</div>
       <h2 class="title">Food, family and safety on the road</h2>
       <div class="rule"></div>
@@ -466,7 +421,7 @@
           <div class="place-desc">Coffee, bread and fruit for about $2.</div>
           <div class="place">The market</div>
           <div class="place-desc">Rice with chicken, beans and plantain for about $5.</div>
-          <div class="quant">There aren't any restaurants inside my building, but there are a lot of places near. Some are cheap and many people eat at the market; I don't have much time.</div>
+          <div class="quant">There aren't any restaurants inside my building, but there are a lot of places nearby. Some are cheap and many people eat at the market; I don't have much time.</div>
         </article>
         <article class="card" style="flex:5.5">
           <div class="mini-k">Yesterday and tomorrow</div>

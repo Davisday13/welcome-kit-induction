@@ -21,11 +21,12 @@ SECTIONS = [
      "network and I am visiting clients in Bugaba and Boquete."),
     ("2. How to get to my workplace",
      "My base is in Urbanizaci\u00f3n La Riviera, on Calle 5, but my main workplace is "
-     "Restaurante PikTa, on Calle Ar\u00edstides Romero. From my base, go east on Calle 5 "
-     "and turn left on Calle 4. Then go north to Calle Ar\u00edstides Romero and turn "
-     "right. PikTa is one block ahead, near Ozaga Market, and there is parking "
-     "behind the building. The map with my route is on slide 3, and it takes about "
-     "five minutes by car."),
+     "Restaurante PikTa, on Calle Ar\u00edstides Romero. From my base, go toward "
+     "Carretera 48. Then, continue on Carretera 48 and Avenida 8a "
+     "Oeste. Go straight until Calle Ar\u00edstides Romero and turn left: PikTa is on "
+     "the left, next to Hospital Chiriqu\u00ed, and there is parking behind the "
+     "building. The map with my route is on slide 3, and it "
+     "takes about ten minutes by car, about five kilometers."),
     ("3. Around the office",
      "There are a lot of places to eat near my office. The bakery on the corner is "
      "cheap: coffee, bread and fruit for about two dollars. At the market, a typical "
@@ -35,10 +36,10 @@ SECTIONS = [
      "dinner with my family. Tomorrow I will have a long day: I will visit three "
      "clients in David, Bugaba and Boquete."),
     ("4. Safety first",
-     "The first-aid kit is in my car, in a red box, and I have the key. If someone "
-     "is bleeding, apply pressure and call 911. The emergency number in Panama is "
-     "911. When I travel, I check the car before a long trip, I share my route with "
-     "my family, and I back up my data before every visit."),
+     "The first-aid kit is in my car, in a red box, and I have the key: ask me for "
+     "it. If someone is bleeding, apply pressure and call 911, the emergency number "
+     "in Panama. When I travel, I check the car before a long trip, I share my route "
+     "with my family, and I back up my data before every visit."),
 ]
 
 text = " ".join(body for _, body in SECTIONS)

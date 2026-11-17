@@ -241,13 +241,13 @@ tx(s, "Independent IT Technician  \u00b7  Chiriqu\u00ed", M, 4.95, 8.0, 0.4, siz
    color=ACCENT)
 tx(s, "Welcome Kit  \u00b7  David, Chiriqu\u00ed  \u00b7  October 2026", M, 5.75, 8.0, 0.35,
    size=13, color=RGBColor(0xB8, 0xC6, 0xD4))
-notes(s, "Good morning, everyone. My name is Davis Fernandez and I am an independent "
+notes(s, "Good morning, everyone. My name is Davis Fernández and I am an independent "
          "IT technician. Thank you for the warm welcome. Today I am going to present "
          "my welcome kit for a new colleague from another country. I will talk about "
-         "four things: who I am and my routine, how to get to my office in David, the "
-         "places to eat near my office, and the safety rules I use when I visit "
-         "clients all over Chiriqui. It will take about five minutes, and at the end "
-         "you can ask me questions.")
+         "four things: who I am and what my routine is, how to get to my office in "
+         "David, the places to eat near my office, and the safety rules I use when I "
+         "visit clients all over Chiriquí. It will take about five minutes, and at "
+         "the end you can ask me questions.")
 
 # ================================================================ SLIDE 2
 s = prs.slides.add_slide(BLANK)
@@ -295,16 +295,16 @@ for i, (hour, desc) in enumerate(steps):
         rect(s, l + 2.1, 5.14, 0.4, 0.02, RGBColor(0x3C, 0x5B, 0x78))
 
 footer(s, 2)
-notes(s, "Let me start with me. My name is Davis Fernandez and I am an independent IT "
-         "technician. I am friendly and organized, and I am a little shy, so please "
-         "be patient with me at the beginning. I do not work in one office all day: "
-         "I visit clients all over Chiriqui province, and my base is in David. My "
-         "schedule is from eight in the morning to five in the afternoon, Monday to "
-         "Friday. This week I am setting up a new network and I am visiting clients "
-         "in Bugaba and Boquete. My daily routine is like this. At eight o'clock I "
-         "check my messages and I plan the visits. Then, from ten to four, I visit "
-         "clients and I fix their equipment. At four thirty I update the tickets and "
-         "I plan tomorrow.")
+notes(s, "Let me start by telling you about myself. My name is Davis Fernández and "
+         "I am an independent IT technician. I am friendly and organized, and I am a "
+         "little shy, so please be patient with me at the beginning. I do not work in "
+         "one office all day: I visit clients all over Chiriquí province, and my base "
+         "is in David. My schedule is from eight in the morning to five in the "
+         "afternoon, Monday to Friday. This week I am setting up a new network and I "
+         "am visiting clients in Bugaba and Boquete. My daily routine is like this. "
+         "At eight o'clock I check my messages and I plan the visits. Then, from ten "
+         "to four, I visit clients and I fix their equipment. At four thirty I update "
+         "the tickets and I plan tomorrow's visits.")
 
 # ================================================================ SLIDE 3
 s = prs.slides.add_slide(BLANK)
@@ -323,10 +323,10 @@ tx(s, "My base: La Riviera, Calle 5.", M + 0.35, 3.58, 3.9, 0.28, size=9.5,
 
 tx(s, "By car \u00b7 step by step", M, 4.12, 4.2, 0.3, size=10, bold=True, color=ACCENT,
    caps=True)
-steps = [("First,", "leave my base and go east on Calle 5."),
-         ("Then,", "turn left on Calle 4."),
-         ("After that,", "go north to Calle Ar\u00edstides Romero."),
-         ("Finally,", "turn right; PikTa is near Ozaga Market.")]
+steps = [("First,", "leave my base and go toward Carretera 48."),
+         ("Then,", "continue on Carretera 48 and Av. 8a Oeste."),
+         ("After that,", "go straight until Calle Ar\u00edstides Romero."),
+         ("Finally,", "turn left; PikTa is on the left, next to Hospital Chiriqu\u00ed.")]
 y = 4.42
 for i, (word, text) in enumerate(steps):
     circle(s, M, y + 0.03, 0.3, ACCENT)
@@ -342,32 +342,40 @@ for i, (word, text) in enumerate(steps):
     r1.text = word + " "
     _count(r1.text)
     r1.font.name = FONT
-    r1.font.size = Pt(12.5)
+    r1.font.size = Pt(11.5)
     r1.font.bold = True
     r1.font.color.rgb = NAVY
     r2 = p.add_run()
     r2.text = text
     _count(r2.text)
     r2.font.name = FONT
-    r2.font.size = Pt(12.5)
+    r2.font.size = Pt(11.5)
     r2.font.color.rgb = MUTED
     y += 0.52
 
-draw_map(s, 5.6, 2.2, 6.88, 4.45)
-tx(s, "From my base in La Riviera to PikTa \u00b7 5 minutes by car",
+# --- mapa real (captura de Google Maps, ruta La Riviera -> PikTa)
+_map = os.path.join(os.path.dirname(os.path.abspath(__file__)), "mapa-pikta.png")
+card(s, 5.6, 2.2, 6.88, 4.45, fill=RGBColor(0xF2, 0xEF, 0xE9), radius=0.03,
+     line=RGBColor(0xD8, 0xE2, 0xD5))
+_mh = 4.25
+_mw = _mh * 841 / 726
+s.shapes.add_picture(_map, Inches(5.6 + (6.88 - _mw) / 2), Inches(2.3),
+                     Inches(_mw), Inches(_mh))
+tx(s, "From my base in La Riviera to PikTa \u00b7 10 minutes by car \u00b7 5 km",
    5.6, 6.68, 6.9, 0.25, size=9.5, color=MUTED, italic=True)
 
 footer(s, 3)
-notes(s, "Now, how to get to my workplace. My base is in La Riviera, on Calle five, "
-         "but I do not stay there all day: my main client is Restaurante PikTa, on "
-         "Calle Aristides Romero, and I also visit clients in Bugaba, Boquete and "
-         "Volcan. On the map, the orange line is the route from my base to PikTa. "
-         "First, I leave my base and I go east on Calle five. Then, I turn left on "
-         "Calle four. After that, I go north to Calle Aristides Romero. Finally, I "
-         "turn right, and PikTa is there, near Ozaga Market. It takes about five "
-         "minutes by car. When I work in the restaurant, I park on the street behind "
-         "the building. My advice is to leave early, because the traffic is heavy at "
-         "eight in the morning.")
+notes(s, "Now, let me tell you how to get to my workplace. My base is in La Riviera, "
+         "on Calle 5, but I do not stay there all day: my main client is Restaurante "
+         "PikTa, on Calle Arístides Romero, and I also visit clients in Bugaba, "
+         "Boquete and Volcán. On the map, the blue line is the route from my base to "
+         "PikTa. First, I leave my base and I go toward Ruta David-Querévalo, "
+         "Carretera 48. Then, I continue on Carretera 48 and Avenida 8a Oeste, also "
+         "called Avenida La Libertad. After that, I go straight until Calle Arístides "
+         "Romero. Finally, I turn left, and PikTa is on the left, next to Hospital "
+         "Chiriquí. It takes about ten minutes by car, about five kilometers. When I "
+         "work in the restaurant, I park on the street behind the building. My advice "
+         "is to leave early, because the traffic is heavy at eight in the morning.")
 
 # ================================================================ SLIDE 4
 s = prs.slides.add_slide(BLANK)
@@ -384,7 +392,7 @@ tx(s, "The market", M + 0.3, 3.22, 2.6, 0.32, size=15, bold=True, color=NAVY)
 tx(s, "Rice with chicken, beans and plantain for about $5.",
    M + 0.3, 3.52, 5.35, 0.3, size=11, color=MUTED)
 tx(s, "There aren't any restaurants inside my building, but there are a lot of "
-      "places near. Some are cheap and many people eat at the market; I don't have "
+      "places nearby. Some are cheap and many people eat at the market; I don't have "
       "much time.",
    M + 0.3, 3.83, 5.4, 0.3, size=9.5, italic=True, color=RGBColor(0x3D, 0x5A, 0x74))
 
@@ -427,7 +435,7 @@ for i, r in enumerate(rules):
     tx(s, r, M + 7.32, yy, 3.2, 0.3, size=10, color=TEXT)
 
 footer(s, 4)
-notes(s, "This last slide is about the office and about safety. There are a lot of "
+notes(s, "This last slide is about the office and safety. There are a lot of "
          "places to eat near my office. The bakery on the corner is cheap: coffee, "
          "bread and fruit for about two dollars. The market is also good: a typical "
          "lunch is rice with chicken, beans and plantain for about five dollars. "
@@ -436,7 +444,7 @@ notes(s, "This last slide is about the office and about safety. There are a lot 
          "yesterday I finished work and I went to dinner with my family. Tomorrow I "
          "will have a long day: I will visit three clients in David, Bugaba and "
          "Boquete, so I will leave home very early. Now, safety. The emergency "
-         "number is 911. I have the first-aid kit in my car, in a red box, and I "
+         "number is 911. I keep the first-aid kit in my car, in a red box, and I "
          "have the key. If someone is bleeding, apply pressure and call 911. "
          "Finally, three simple rules: check the car before a long trip, share your "
          "route with your family, and back up your data before every visit. Thank "
