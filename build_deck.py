@@ -262,7 +262,7 @@ cards = [
      "Independent IT technician. I visit clients all over Chiriqu\u00ed; my main client "
      "is PikTa."),
     ("03", "My schedule",
-     "I start at 8:00 a.m. and finish at 5:00 p.m., from Monday to Friday."),
+     "I work from 8:00 a.m. to 5:00 p.m., Monday to Friday."),
     ("04", "This week",
      "This week I am setting up a network and visiting clients in Bugaba and "
      "Boquete."),
@@ -301,7 +301,7 @@ notes(s, "Let me start by telling you about myself. My name is Davis Fernández 
          "one office all day: I visit clients all over Chiriquí province, and my base "
          "is in David. My schedule is from eight in the morning to five in the "
          "afternoon, Monday to Friday. This week I am setting up a new network and I "
-         "am visiting clients in Bugaba and Boquete. My daily routine is like this. "
+         "am visiting clients in Bugaba and Boquete. "
          "At eight o'clock I check my messages and I plan the visits. Then, from ten "
          "to four, I visit clients and I fix their equipment. At four thirty I update "
          "the tickets and I plan tomorrow's visits.")
@@ -323,7 +323,7 @@ tx(s, "My base: La Riviera, Calle 5.", M + 0.35, 3.58, 3.9, 0.28, size=9.5,
 
 tx(s, "By car \u00b7 step by step", M, 4.12, 4.2, 0.3, size=10, bold=True, color=ACCENT,
    caps=True)
-steps = [("First,", "leave my base and go toward Carretera 48."),
+steps = [("First,", "from the Romero La Riviera bus stop, go north on Carretera 48."),
          ("Then,", "continue on Carretera 48 and Av. 8a Oeste."),
          ("After that,", "go straight until Calle Ar\u00edstides Romero."),
          ("Finally,", "turn left; PikTa is on the left, next to Hospital Chiriqu\u00ed.")]
@@ -369,13 +369,13 @@ notes(s, "Now, let me tell you how to get to my workplace. My base is in La Rivi
          "on Calle 5, but I do not stay there all day: my main client is Restaurante "
          "PikTa, on Calle Arístides Romero, and I also visit clients in Bugaba, "
          "Boquete and Volcán. On the map, the blue line is the route from my base to "
-         "PikTa. First, I leave my base and I go toward Ruta David-Querévalo, "
-         "Carretera 48. Then, I continue on Carretera 48 and Avenida 8a Oeste, also "
-         "called Avenida La Libertad. After that, I go straight until Calle Arístides "
-         "Romero. Finally, I turn left, and PikTa is on the left, next to Hospital "
-         "Chiriquí. It takes about ten minutes by car, about five kilometers. When I "
-         "work in the restaurant, I park on the street behind the building. My advice "
-         "is to leave early, because the traffic is heavy at eight in the morning.")
+         "PikTa. First, I leave my base and I drive to the Romero La Riviera bus stop. "
+         "From there, I go north on Carretera 48, and I continue on Avenida 8a Oeste, "
+         "also called Avenida La Libertad. After that, I go straight until Calle "
+         "Arístides Romero. Finally, I turn left, and PikTa is on the left, next to "
+         "Hospital Chiriquí. It takes about ten minutes by car, about five kilometers. "
+         "When I work in the restaurant, I park on the street behind the building. My advice "
+         "is to leave early: the traffic is heavy at eight.")
 
 # ================================================================ SLIDE 4
 s = prs.slides.add_slide(BLANK)
@@ -440,10 +440,10 @@ notes(s, "This last slide is about the office and safety. There are a lot of "
          "bread and fruit for about two dollars. The market is also good: a typical "
          "lunch is rice with chicken, beans and plantain for about five dollars. "
          "Some places are expensive and many people eat at the market, but I do not "
-         "have much time, so I usually eat near the office. And this was my week: "
-         "yesterday I finished work and I went to dinner with my family. Tomorrow I "
+         "have much time, so I usually eat near the office. Yesterday I finished "
+         "work and I went to dinner with my family. Tomorrow I "
          "will have a long day: I will visit three clients in David, Bugaba and "
-         "Boquete, so I will leave home very early. Now, safety. The emergency "
+         "Boquete. Now, safety. The emergency "
          "number is 911. I keep the first-aid kit in my car, in a red box, and I "
          "have the key. If someone is bleeding, apply pressure and call 911. "
          "Finally, three simple rules: check the car before a long trip, share your "

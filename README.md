@@ -52,7 +52,7 @@ Atajos: `←` `→` navegar · `N` notas · `F` pantalla completa · `P` imprimi
 
 | Archivo | Qué es |
 |---|---|
-| [`Induction_Project_Davis_Fernandez_FINAL.pptx`](Induction_Project_Davis_Fernandez_FINAL.pptx) | **Entregable 1** — 4 diapositivas (16:9) con notas del orador. **347 palabras visibles**. |
+| [`Induction_Project_Davis_Fernandez_FINAL.pptx`](Induction_Project_Davis_Fernandez_FINAL.pptx) | **Entregable 1** — 4 diapositivas (16:9) con notas del orador. **348 palabras visibles**. |
 | [`Welcome_Kit_Escrito_Davis_Fernandez.docx`](Welcome_Kit_Escrito_Davis_Fernandez.docx) | **Entregable 2** — parte escrita. **345 palabras** (rango 250–350). |
 | [`Welcome_Kit_Davis_Fernandez.pdf`](Welcome_Kit_Davis_Fernandez.pdf) | **Entregable 3** — la misma presentación web exportada a PDF (4 páginas, lista para Classroom). |
 | [`mapa-pikta.png`](mapa-pikta.png) | Captura de Google Maps con la ruta de La Riviera a PikTa (la usa la web y el PPTX). |
@@ -71,12 +71,13 @@ Atajos: `←` `→` navegar · `N` notas · `F` pantalla completa · `P` imprimi
 | **Vocabulario de directions** (*turn left/right, go straight, go east/north, one block ahead, next to*) | Diapositiva 3 + parte escrita |
 | **Present simple + present continuous** | *"I start/finish…"* + *"This week I am setting up a network…"* (dip. 2) |
 | **Una frase en pasado y una en futuro** | *"Yesterday I finished work and went to dinner…"* / *"Tomorrow I will have a long day…"* (dip. 4) |
-| **Mapa con la ruta marcada** | Diapositiva 3: captura de Google Maps, ruta La Riviera → Ruta David-Querévalo (Carretera 48) → Av. 8a Oeste / Ave. La Libertad → giro a la izquierda en C. Arístides Romero → **Restaurante PikTa** (junto al Hospital Chiriquí), 10 min / 5 km |
+| **Mapa con la ruta marcada** | Diapositiva 3: captura de Google Maps, desde la parada *Romero La Riviera* → Carretera 48 → Av. 8a Oeste / Ave. La Libertad → giro a la izquierda en C. Arístides Romero → **Restaurante PikTa** (junto al Hospital Chiriquí), 10 min / 5 km |
+| **Direcciones desde un lugar conocido** | *"From the Romero La Riviera bus stop, go north on Carretera 48…"* (dip. 3 y parte escrita) |
 | **Quantifiers** (*some, any, a lot of, many, much*) | *"There aren't any… but there are a lot of… Some are cheap and many people eat… I don't have much time."* (dip. 4) |
 | **Secuencia** (*First, Then, After that, Finally*) | Diapositiva 3, los 4 pasos numerados |
 | **Descripción de primeros auxilios** | Diapositiva 4: kit *in my car, in a red box* → *if someone is bleeding, apply pressure and call 911* |
-| Extensión 250–350 palabras | 345 en Word / 347 visibles en PPT |
-| Oral 4–5 minutos | 548 palabras en las notas ≈ 4,2–4,9 min |
+| Extensión 250–350 palabras | 346 en Word / 348 visibles en PPT |
+| Oral 4–5 minutos | 558 palabras en las notas ≈ 4,3–4,9 min |
 
 ## 🎤 Cronometraje del oral (4–5 min)
 
@@ -109,7 +110,7 @@ python -m http.server 8080   # y abre http://localhost:8080
 ## ✅ Checklist antes de entregar
 
 - [ ] `Induction_Project_Davis_Fernandez_FINAL.pptx` (4 diapositivas, revisar notas con `Alt+F5`)
-- [ ] `Welcome_Kit_Escrito_Davis_Fernandez.docx` (345 palabras)
+- [ ] `Welcome_Kit_Escrito_Davis_Fernandez.docx` (346 palabras)
 - [ ] `Welcome_Kit_Davis_Fernandez.pdf` (subir a Classroom si piden PDF)
 - [ ] Enlace de GitHub Pages en el comentario/entrega de Classroom
 - [ ] Ensayo cronometrado: 4–5 minutos
