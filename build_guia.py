@@ -65,32 +65,30 @@ r.font.size = Pt(9.5)
 r.font.color.rgb = MUTED
 
 h("1. Lo que ya est\u00e1 hecho")
-bullet("Induction_Project_Davis_Fernandez_FINAL.pptx \u2014 4 diapositivas, mapa con la "
-       "ruta y notas del orador de unas 535 palabras (4\u20135 minutos).")
-bullet("Welcome_Kit_Escrito_Davis_Fernandez.docx \u2014 parte escrita de 338 palabras "
+bullet("Induction_Project_Davis_Fernandez_FINAL.pptx \u2014 4 diapositivas redise\u00f1adas "
+       "en estilo menta/Canva, mapa con la ruta y notas del orador de 561 palabras "
+       "(4\u20135 minutos).")
+bullet("Welcome_Kit_Escrito_Davis_Fernandez.docx \u2014 parte escrita de 347 palabras "
        "(el rango pedido es 250\u2013350).")
+bullet("Welcome_Kit_Davis_Fernandez.pdf \u2014 las 4 diapositivas en PDF (960\u00d7540 pt).")
+bullet("index.html \u2014 la misma presentaci\u00f3n en web, con el mismo dise\u00f1o.")
 bullet("Esta gu\u00eda.")
 
-h("2. Datos que faltan (m\u00e1ndamelos y lo dejo cerrado)")
-bullet("Nombre completo tal como debe aparecer en la portada.")
-bullet("Direcci\u00f3n exacta de tu base en La Riviera (calle y n\u00famero de casa).")
-bullet("Confirmar la ruta: si giras en otro punto de la Calle 4 o entras por otra "
-       "calle a PikTa, dime cu\u00e1l.")
-bullet("D\u00f3nde estacionas cuando trabajas en el restaurante.")
-bullet("Los dos lugares de comida reales (ahora son \u2018the bakery on the corner\u2019 y "
-       "\u2018the market\u2019) y el precio aproximado.")
-bullet("Ciudades que cubres, para confirmar David, Bugaba, Boquete y Volc\u00e1n.")
-bullet("Extensi\u00f3n de emergencia o seguro m\u00e9dico, si quieres a\u00f1adirlo al 911.")
-bullet("Foto tuya o logo (opcional, para la portada).")
+h("2. Datos ya cerrados")
+bullet("Nombre: Davis Fern\u00e1ndez \u00b7 IT Support independiente.")
+bullet("Base: La Riviera, Calle 5, David; cliente principal: Restaurante PikTa, "
+       "C. Ar\u00edstides Romero, a 50 m de Julio Gato.")
+bullet("Comida: Panader\u00eda Don Felo (caf\u00e9, pan y fruta ~$2) y S\u00faper Xtra "
+       "(arroz con pollo, frijoles y pl\u00e1tano ~$5).")
+bullet("Ruta: parada Romero La Riviera \u2192 Carretera 48 \u2192 Av. 8a Oeste \u2192 "
+       "C. Ar\u00edstides Romero \u2192 PikTa.")
+bullet("Seguridad: 911, botiqu\u00edn en el carro (caja roja) y tres reglas de viaje.")
 
-h("3. C\u00f3mo cambiar el mapa por una captura de Google Maps")
-par("El mapa dibujado ya cumple, pero una captura real suma en \u2018mapa incluido\u2019:")
-bullet("Abre Google Maps, escribe tu direcci\u00f3n y activa la ruta desde tu casa.")
-bullet("Captura la pantalla con la ruta en azul visible (Win + Shift + S).")
-bullet("En PowerPoint: diapositiva 3, selecciona el mapa, Insertar > Im\u00e1genes y "
-       "coloca la captura encima. Ajusta al mismo tama\u00f1o y env\u00eda el mapa dibujado "
-       "al fondo o b\u00f3rralo.")
-bullet("Deja la etiqueta de la ruta: salida, sem\u00e1foro donde giras y llegada.")
+h("3. Datos opcionales que a\u00fan puedes a\u00f1adir")
+bullet("Direcci\u00f3n exacta de tu base en La Riviera (calle y n\u00famero de casa).")
+bullet("D\u00f3nde estacionas cuando trabajas en el restaurante.")
+bullet("Extensi\u00f3n de emergencia o seguro m\u00e9dico, si quieres a\u00f1adirlo al 911.")
+bullet("Una foto tuya real, si prefieres reemplazar la ilustraci\u00f3n de la portada.")
 
 h("4. Chequeo contra la r\u00fabrica")
 rows = [
@@ -101,8 +99,8 @@ rows = [
     ("Vocabulario (20)", "some / any / a lot of / many / much", "Las 5"),
     ("Presentaci\u00f3n (10)", "Mapa con la ruta marcada", "Listo"),
     ("Presentaci\u00f3n (10)", "4 diapositivas organizadas", "Listo"),
-    ("Oral (20)", "4\u20135 minutos, sin leer", "Notas: ~535 palabras"),
-    ("Extensi\u00f3n", "250\u2013350 palabras escritas", "345 en PPT / 338 en Word"),
+    ("Oral (20)", "4\u20135 minutos, sin leer", "Notas: 561 palabras"),
+    ("Extensi\u00f3n", "250\u2013350 palabras escritas", "311 en PPT / 347 en Word"),
 ]
 tb = doc.add_table(rows=1, cols=3)
 tb.style = "Light Grid Accent 1"
@@ -138,9 +136,8 @@ bullet("Semana 5 \u2014 versi\u00f3n final escrita en Classroom (PPT).")
 bullet("Semana 6 \u2014 presentaci\u00f3n oral en la sesi\u00f3n en vivo.")
 
 h("7. Antes de entregar")
-bullet("Cerrar PowerPoint para poder actualizar el archivo con los datos finales.")
-bullet("Reemplazar los tres campos entre corchetes y revisar que no quede ning\u00fan "
-       "\u2018Maria Gonzalez\u2019.")
+bullet("Cerrar PowerPoint para poder actualizar el archivo final.")
+bullet("Revisar los nombres reales: Panader\u00eda Don Felo, S\u00faper Xtra y Julio Gato.")
 bullet("Exportar una copia en PDF (Archivo > Exportar > PDF).")
 bullet("Practicar en voz alta dos veces con las notas: 4 a 5 minutos.")
 

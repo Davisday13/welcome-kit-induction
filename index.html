@@ -7,17 +7,19 @@
 <meta name="description" content="Induction Project — Welcome Kit for a new colleague. Davis Fernández, independent IT technician, David, Chiriquí.">
 <style>
   :root{
-    --navy:#12131A;
+    --navy:#0E1B4D;
+    --navy-soft:#1C2E6E;
+    --teal:#12C2A0;
+    --teal-d:#0B8F77;
+    --yellow:#FFC53D;
+    --coral:#FF6B8A;
     --blue:#3D6BFF;
-    --accent:#FF5A3C;
-    --teal:#0FB9A6;
-    --sun:#FFC53D;
-    --cream:#FFF4E6;
-    --bg:#FFF4E6;
-    --text:#12131A;
-    --muted:#4E5361;
-    --line:#12131A;
+    --bg:#E9FBF5;
+    --mint:#D6F6EB;
+    --text:#182A4A;
+    --muted:#5C6E7E;
     --white:#fff;
+    --shadow:0 12px 26px rgba(126,196,176,.24);
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html,body{height:100%}
@@ -31,7 +33,7 @@
   #app{position:fixed;inset:0;display:grid;place-items:center}
   #stage{
     width:1280px;height:720px;position:relative;transform-origin:center center;
-    background:var(--bg);border-radius:10px;overflow:hidden;
+    background:var(--bg);border-radius:14px;overflow:hidden;
     box-shadow:0 40px 90px rgba(0,0,0,.6),0 0 0 2px rgba(255,255,255,.06);
   }
 
@@ -39,172 +41,191 @@
   .slide{
     position:absolute;inset:0;opacity:0;visibility:hidden;
     transform:translateY(10px);transition:opacity .38s ease,transform .38s ease;
+    background:var(--bg);
   }
   .slide.active{opacity:1;visibility:visible;transform:none}
-  .slide.dark{background:var(--navy);color:var(--white)}
 
-  .kicker{
-    position:absolute;left:82px;top:50px;
-    display:inline-block;padding:6px 13px 5px;border:2px solid var(--navy);border-radius:999px;
-    font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;
-    background:var(--sun);color:var(--navy);box-shadow:4px 4px 0 var(--navy);
+  /* chip superior */
+  .chip{
+    position:absolute;left:82px;top:46px;height:35px;
+    display:inline-flex;align-items:center;gap:9px;padding:0 17px 0 13px;
+    background:var(--white);border-radius:999px;
+    font-size:12px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;
+    color:var(--navy);white-space:nowrap;
   }
+  .chip .dot{width:11px;height:11px;border-radius:50%;background:var(--teal)}
   .title{
-    position:absolute;left:82px;top:86px;width:1080px;
-    font-size:47px;line-height:1.02;font-weight:900;letter-spacing:-.03em;color:var(--navy);
+    position:absolute;left:82px;top:92px;width:1120px;
+    font-size:50px;line-height:1.02;font-weight:800;letter-spacing:-.03em;color:var(--navy);
   }
-  .rule{
-    position:absolute;left:82px;top:168px;width:126px;height:9px;
-    background:linear-gradient(90deg,var(--accent) 0 33.4%,var(--teal) 33.4% 66.7%,var(--sun) 66.7% 100%);
+  .k{
+    font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--teal-d);
   }
 
   /* ---------- slide 1 ---------- */
-  .s1 .halo{position:absolute}
-  .s1 .halo-a{width:640px;height:640px;right:-205px;top:-215px;background:var(--accent);border-radius:50%}
-  .s1 .halo-b{width:330px;height:330px;right:-95px;bottom:-115px;background:var(--teal);border-radius:50%}
-  .s1 .halo-c{
-    width:330px;height:330px;left:-70px;bottom:-70px;background:var(--sun);
-    clip-path:polygon(0 0,100% 100%,0 100%);
+  .s1 .blob{position:absolute;border-radius:50%;background:#fff}
+  .s1 .blob-a{width:540px;height:540px;right:-130px;top:-215px}
+  .s1 .blob-b{width:270px;height:270px;left:-80px;bottom:-120px}
+  .s1 .portrait{
+    position:absolute;left:754px;top:106px;width:480px;height:480px;border-radius:50%;
+    background:var(--yellow);overflow:hidden;
   }
-  .s1 .bar{
-    position:absolute;left:0;right:0;bottom:0;height:15px;
-    background:repeating-linear-gradient(90deg,
-      var(--accent) 0 42px,var(--sun) 42px 84px,var(--teal) 84px 126px,#3D6BFF 126px 168px);
+  .s1 .portrait img{width:480px;height:480px;display:block}
+  .lap{
+    position:absolute;left:700px;top:149px;width:69px;height:69px;border-radius:23px;
+    background:#fff;box-shadow:0 10px 20px rgba(126,196,176,.30);
   }
-  .s1 .kicker{top:137px;left:82px;background:var(--accent);color:var(--white);
-    border-color:var(--white);box-shadow:4px 4px 0 rgba(255,255,255,.28);font-size:13px}
+  .lap::before{content:"";position:absolute;left:20px;top:18px;width:42px;height:27px;border-radius:4px;background:var(--navy)}
+  .lap::after{content:"";position:absolute;left:16px;top:49px;width:50px;height:6px;border-radius:3px;background:var(--navy)}
+  .s1 .d1,.s1 .d2,.s1 .d3{position:absolute;border-radius:50%}
+  .s1 .d1{width:25px;height:25px;right:60px;top:128px;background:var(--yellow)}
+  .s1 .d2{width:19px;height:19px;left:714px;top:476px;background:var(--coral)}
+  .s1 .d3{width:33px;height:33px;right:44px;top:533px;background:var(--teal)}
   .s1 h1{
-    position:absolute;left:82px;top:174px;width:840px;
-    font-size:84px;line-height:.96;font-weight:900;letter-spacing:-.035em;color:var(--white);
+    position:absolute;left:82px;top:168px;width:680px;
+    font-size:78px;line-height:.95;font-weight:800;letter-spacing:-.035em;color:var(--navy);
   }
-  .s1 h1 .hl{
-    display:inline-block;padding:0 14px;margin-left:-14px;
-    background:var(--sun);color:var(--navy);box-shadow:7px 7px 0 var(--accent);
-  }
-  .s1 .name{position:absolute;left:82px;top:424px;font-size:38px;font-weight:900;color:var(--white)}
-  .s1 .role{position:absolute;left:82px;top:478px;font-size:24px;font-weight:600;color:var(--teal)}
-  .s1 .meta{position:absolute;left:82px;top:556px;font-size:17px;color:#B8C6D4}
+  .s1 .bar{position:absolute;left:85px;top:363px;width:106px;height:9px;border-radius:5px;background:var(--teal)}
+  .s1 .name{position:absolute;left:82px;top:389px;font-size:35px;font-weight:800;color:var(--navy)}
+  .s1 .role{position:absolute;left:82px;top:443px;font-size:20px;font-weight:600;color:var(--teal-d)}
+  .s1 .meta{position:absolute;left:82px;top:482px;font-size:16px;color:var(--muted)}
+  .s1 .chip2{top:530px;height:35px;font-size:13px;letter-spacing:.04em;text-transform:none;font-weight:700}
+  .stripes{position:absolute;left:0;right:0;bottom:0;height:13px;display:flex}
+  .stripes i{flex:1;display:block}
+  .stripes .c1{background:var(--teal)}
+  .stripes .c2{background:var(--yellow)}
+  .stripes .c3{background:var(--coral)}
+  .stripes .c4{background:var(--blue)}
 
   /* ---------- slide 2 ---------- */
-  .cards{position:absolute;left:82px;right:82px;top:216px;display:flex;gap:19px}
-  .card{
-    flex:1;background:#fff;border:2px solid var(--navy);border-radius:12px;
-    padding:22px 24px;min-height:211px;box-shadow:7px 7px 0 var(--navy);
+  .s2 .sub{position:absolute;left:82px;top:173px;font-size:20px;color:var(--muted)}
+  .pills{position:absolute;left:82px;top:215px;display:flex;gap:17px}
+  .pills .p{
+    display:inline-flex;align-items:center;gap:9px;height:38px;padding:0 18px 0 14px;
+    background:#fff;border-radius:999px;font-size:14px;font-weight:700;color:var(--navy);
+  }
+  .pills i{width:11px;height:11px;border-radius:50%;display:block}
+  .pills .i1{background:var(--teal)} .pills .i2{background:var(--yellow)} .pills .i3{background:var(--coral)}
+  .s2 .cards{position:absolute;left:82px;top:278px;display:flex;gap:15px}
+  .s2 .card{
+    width:202px;height:168px;padding:15px 18px;background:#fff;border-radius:20px;
+    box-shadow:var(--shadow);
   }
   .badge{
-    width:48px;height:48px;border:2px solid var(--navy);background:var(--accent);color:var(--white);
-    display:grid;place-items:center;font-size:15px;font-weight:900;margin-bottom:20px;
-    box-shadow:3px 3px 0 var(--navy);
+    width:40px;height:40px;border-radius:50%;display:grid;place-items:center;
+    font-size:14px;font-weight:800;color:#fff;margin-bottom:13px;
   }
-  .cards .card:nth-child(2) .badge{background:var(--teal);color:var(--navy)}
-  .cards .card:nth-child(3) .badge{background:var(--sun);color:var(--navy)}
-  .cards .card:nth-child(4) .badge{background:var(--blue);color:var(--white)}
-  .card h3{font-size:20px;font-weight:900;color:var(--navy);margin-bottom:12px;letter-spacing:-.02em}
-  .card p{font-size:16px;line-height:1.42;color:var(--muted)}
-
-  .routine{
-    position:absolute;left:82px;right:82px;top:459px;height:161px;border-radius:12px;
-    background:var(--navy);color:#fff;display:flex;align-items:center;padding:0 40px;gap:26px;
-    box-shadow:7px 7px 0 var(--teal);
+  .s2 .card:nth-child(1) .badge{background:var(--teal)}
+  .s2 .card:nth-child(2) .badge{background:var(--yellow);color:var(--navy)}
+  .s2 .card:nth-child(3) .badge{background:var(--coral)}
+  .s2 .card h3{font-size:18px;font-weight:800;color:var(--navy);margin-bottom:7px;letter-spacing:-.01em}
+  .s2 .card p{font-size:14px;line-height:1.32;color:var(--muted)}
+  .week{
+    position:absolute;left:82px;top:466px;width:636px;height:149px;
+    background:var(--navy);border-radius:14px;padding:18px 34px;
+    box-shadow:0 14px 26px rgba(14,27,77,.20);
   }
-  .routine .label{font-size:13px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--sun);margin-bottom:6px}
-  .routine .hours{font-size:30px;font-weight:900;white-space:nowrap}
-  .routine .hours b{color:var(--accent);font-weight:900}
-  .routine .steps{display:flex;flex:1;justify-content:space-between;gap:10px;margin-left:22px}
-  .step{position:relative;padding-left:18px;min-width:150px}
-  .step::before{content:"";position:absolute;left:0;top:5px;width:9px;height:9px;border-radius:50%;background:var(--sun)}
-  .step .h{font-size:13px;font-weight:900;color:var(--sun);margin-bottom:4px}
-  .step .d{font-size:13px;line-height:1.3;color:#D3DEE8}
+  .week .k{color:var(--yellow)}
+  .week p{color:#fff;font-size:20.5px;line-height:1.26;margin-top:9px;font-weight:600}
+  .s2 .portrait{
+    position:absolute;left:763px;top:120px;width:470px;height:470px;border-radius:50%;
+    background:var(--yellow);overflow:hidden;
+  }
+  .s2 .portrait img{width:470px;height:470px;display:block}
+  .s2 .lap{left:720px;top:163px}
 
   /* ---------- slide 3 ---------- */
-  .s3 .col{position:absolute;left:82px;top:211px;width:432px}
-  .addr{
-    background:var(--navy);color:#fff;border:2px solid var(--navy);border-radius:12px;
-    padding:22px 26px;height:168px;box-shadow:7px 7px 0 var(--accent);
+  .client{
+    position:absolute;left:82px;top:202px;width:427px;height:154px;border-radius:14px;
+    background:var(--navy);padding:18px 31px;color:#fff;
+    box-shadow:0 14px 26px rgba(14,27,77,.20);
   }
-  .addr .k{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--sun)}
-  .addr h2{font-size:26px;line-height:1.1;margin:10px 0 8px;font-weight:900;letter-spacing:-.02em}
-  .addr .street{font-size:15px;font-weight:700;color:var(--teal)}
-  .addr .note{font-size:12.5px;color:#C9D5E1;margin-top:8px}
-  .steps-title{
-    display:inline-block;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;
-    color:var(--navy);background:var(--teal);border:2px solid var(--navy);border-radius:999px;
-    padding:5px 12px 4px;box-shadow:4px 4px 0 var(--navy);margin:34px 0 14px;
+  .client .k{color:var(--teal)}
+  .client h3{font-size:24px;font-weight:800;margin-top:8px;letter-spacing:-.01em}
+  .client .street{font-size:12.5px;font-weight:600;color:var(--yellow);margin-top:8px}
+  .client .note{font-size:12.5px;color:#C9D5E1;margin-top:6px}
+  .steps-card{
+    position:absolute;left:82px;top:374px;width:427px;height:274px;border-radius:20px;
+    background:#fff;padding:15px 29px;box-shadow:var(--shadow);
   }
-  .s3 .steps{display:flex;flex-direction:column;gap:11px}
-  .stp{display:flex;gap:14px;align-items:flex-start}
+  .stp{display:flex;gap:13px;align-items:flex-start;margin-top:15px}
   .stp .n{
-    flex:none;width:29px;height:29px;border:2px solid var(--navy);background:var(--accent);
-    color:var(--white);font-size:13px;font-weight:900;display:grid;place-items:center;
-    box-shadow:2px 2px 0 var(--navy);
+    flex:none;width:29px;height:29px;border-radius:50%;background:var(--teal);color:#fff;
+    font-size:13px;font-weight:800;display:grid;place-items:center;
   }
-  .stp:nth-child(2) .n{background:var(--teal);color:var(--navy)}
-  .stp:nth-child(3) .n{background:var(--sun);color:var(--navy)}
-  .stp:nth-child(4) .n{background:var(--blue);color:var(--white)}
-  .stp p{font-size:15.5px;line-height:1.3;color:var(--muted)}
+  .stp p{font-size:14px;line-height:1.28;color:var(--muted);padding-top:3px}
   .stp strong{color:var(--navy)}
-  .map-wrap{
-    position:absolute;left:538px;top:211px;width:661px;height:427px;border-radius:12px;overflow:hidden;
-    border:2px solid var(--navy);box-shadow:7px 7px 0 var(--navy);
+  .stp + .stp{border-top:1px solid #E3F5EE;padding-top:14px}
+  .map-card{
+    position:absolute;left:538px;top:202px;width:660px;height:448px;border-radius:18px;
+    background:#fff;box-shadow:var(--shadow);overflow:hidden;display:grid;place-items:center;
+    padding:0 0 56px;
   }
-  .map-wrap svg{width:100%;height:100%;display:block}
-  .map-wrap img{width:100%;height:100%;object-fit:contain;background:#F2EFE9;display:block}
-  .map-cap{position:absolute;left:538px;top:654px;width:661px;font-size:12px;font-style:italic;color:var(--muted)}
+  .map-card img{width:454px;height:392px;object-fit:fill;display:block}
+  .map-cap{position:absolute;left:562px;top:612px;font-size:12.5px;font-style:italic;color:var(--muted)}
+  .km{
+    position:absolute;left:1006px;top:608px;height:31px;padding:0 18px;border-radius:999px;
+    background:var(--mint);color:var(--navy);font-size:12.5px;font-weight:800;
+    display:flex;align-items:center;
+  }
 
   /* ---------- slide 4 ---------- */
-  .s4 .row-top{position:absolute;left:82px;right:82px;top:202px;display:flex;gap:19px}
-  .s4 .row-top .card{min-height:211px}
-  .s4 .row-top .card:nth-child(1){border-top:10px solid var(--accent);padding-top:18px}
-  .s4 .row-top .card:nth-child(2){background:var(--sun);border-top:10px solid var(--navy);padding-top:18px}
-  .mini-k{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--navy);margin-bottom:12px}
-  .place{font-size:18px;font-weight:900;color:var(--navy);margin-bottom:4px}
-  .place-desc{font-size:14px;color:var(--muted);margin-bottom:16px}
-  .quant{font-size:12.5px;font-style:italic;color:#3D5A74;line-height:1.35}
-  .y-t{
-    display:inline-block;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
-    color:var(--navy);background:var(--accent);border:2px solid var(--navy);
-    padding:2px 8px;margin-bottom:9px;
+  .eat-card{
+    position:absolute;left:82px;top:192px;width:581px;height:250px;border-radius:20px;
+    background:#fff;padding:17px 29px;box-shadow:var(--shadow);
   }
-  .y-v{font-size:15.5px;line-height:1.35;color:var(--navy);margin-bottom:18px}
-  .safety-k{
-    display:inline-block;position:absolute;left:82px;top:456px;font-size:12px;font-weight:800;
-    letter-spacing:.16em;text-transform:uppercase;color:var(--navy);background:var(--teal);
-    border:2px solid var(--navy);border-radius:999px;padding:5px 13px 4px;box-shadow:4px 4px 0 var(--navy);
+  .eat{display:flex;align-items:center;gap:16px;margin-top:14px}
+  .tag{
+    flex:none;width:48px;height:48px;border-radius:24px;display:grid;place-items:center;
+    color:#fff;font-size:13px;font-weight:800;
   }
-  .s4 .row-bot{position:absolute;left:82px;right:82px;top:497px;display:flex;gap:19px}
-  .s4 .row-bot .card{min-height:154px;padding:18px 22px}
-  .s4 .row-bot .card:nth-child(1){background:var(--accent);box-shadow:7px 7px 0 var(--navy)}
-  .s4 .row-bot .card:nth-child(2){background:var(--teal);box-shadow:7px 7px 0 var(--navy)}
-  .s4 .row-bot .card:nth-child(3){background:var(--navy);box-shadow:7px 7px 0 var(--accent)}
-  .s4 .row-bot .card:nth-child(3) .mini-k{color:var(--sun)}
-  .s4 .row-bot .card:nth-child(1) .small,
-  .s4 .row-bot .card:nth-child(2) .small,
-  .s4 .row-bot .card:nth-child(2) .place{color:var(--navy)}
-  .big{font-size:38px;font-weight:900;color:var(--navy);line-height:1;margin:4px 0 8px;letter-spacing:-.03em}
-  .small{font-size:13px;line-height:1.35;color:var(--muted)}
-  .rule-item{display:flex;gap:10px;align-items:flex-start;margin-bottom:13px}
-  .rule-item::before{content:"";flex:none;width:5px;height:18px;background:var(--sun);border-radius:2px;margin-top:2px}
-  .rule-item span{font-size:13.5px;line-height:1.3;color:#E8EAF0}
+  .tag.coral{background:var(--coral)} .tag.teal{background:var(--teal)}
+  .eat-txt{flex:1}
+  .eat-txt b{display:block;font-size:18px;color:var(--navy);letter-spacing:-.01em}
+  .eat-txt span{display:block;font-size:13px;color:var(--muted);margin-top:2px}
+  .price{
+    flex:none;height:33px;padding:0 16px;border-radius:999px;background:var(--yellow);
+    color:var(--navy);font-size:12.5px;font-weight:800;display:flex;align-items:center;
+  }
+  .quant{font-size:12.5px;font-style:italic;line-height:1.35;color:#3D5A74;margin-top:16px}
+  .when{
+    position:absolute;left:677px;top:192px;width:521px;height:250px;border-radius:20px;
+    background:#fff;padding:17px 29px;box-shadow:var(--shadow);
+  }
+  .yt{
+    display:inline-flex;align-items:center;gap:8px;height:31px;padding:0 15px 0 12px;
+    border-radius:999px;font-size:12.5px;font-weight:800;color:var(--navy);margin-top:13px;
+  }
+  .yt i{width:10px;height:10px;border-radius:50%;display:block}
+  .yt.past{background:#FFE1E7} .yt.past i{background:var(--coral)}
+  .yt.future{background:#E4EAFF} .yt.future i{background:var(--blue)}
+  .when p{font-size:14px;line-height:1.32;color:var(--text);margin-top:7px}
+  .safety{position:absolute;left:82px;top:461px;display:flex;gap:18px}
+  .safety .card{
+    height:175px;border-radius:20px;background:#fff;padding:16px 24px;box-shadow:var(--shadow);
+  }
+  .safety .c1{width:240px}
+  .safety .c2{width:389px}
+  .safety .c3{width:449px}
+  .safety .big{font-size:39px;font-weight:800;color:var(--navy);line-height:1;margin:6px 0 10px;letter-spacing:-.02em}
+  .safety .lead{font-size:17px;font-weight:800;color:var(--navy);margin-top:8px}
+  .safety .small{font-size:12.5px;line-height:1.32;color:var(--muted);margin-top:7px}
+  .rule{display:flex;gap:10px;align-items:flex-start;margin-top:15px}
+  .rule::before{content:"";flex:none;width:6px;height:19px;border-radius:3px;background:var(--teal);margin-top:1px}
+  .rule span{font-size:12.5px;line-height:1.3;color:var(--text)}
 
   /* ---------- footer / chrome ---------- */
-  .foot{
-    position:absolute;left:82px;bottom:32px;font-size:11px;font-weight:600;color:var(--muted);
-  }
-  .num{
-    position:absolute;right:82px;bottom:32px;font-size:11px;font-weight:800;color:var(--muted);
-    border:2px solid var(--navy);border-radius:999px;padding:3px 9px 2px;background:#fff;
-  }
+  .foot{position:absolute;left:82px;bottom:29px;font-size:11px;font-weight:600;color:var(--muted)}
+  .num{position:absolute;right:82px;bottom:29px;font-size:11px;font-weight:700;color:var(--muted)}
 
-  #dots{
-    position:fixed;left:50%;bottom:18px;transform:translateX(-50%);
-    display:flex;gap:9px;z-index:20;
-  }
+  #dots{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);display:flex;gap:9px;z-index:20}
   #dots button{
-    width:9px;height:9px;border-radius:0;border:0;cursor:pointer;padding:0;
+    width:9px;height:9px;border-radius:50%;border:0;cursor:pointer;padding:0;
     background:rgba(255,255,255,.28);transition:background .2s,transform .2s;
   }
   #dots button:hover{background:rgba(255,255,255,.6)}
-  #dots button.on{background:var(--accent);transform:scale(1.5)}
+  #dots button.on{background:var(--teal);transform:scale(1.5)}
 
   #hint{
     position:fixed;left:50%;top:10px;transform:translateX(-50%);
@@ -222,76 +243,68 @@
     transform:translateY(101%);transition:transform .25s ease;z-index:30;
   }
   #notes.open{transform:none}
-  #notes h4{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+  #notes h4{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:8px}
 
   /* ---------- motion ---------- */
   @keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
   @keyframes slide-r{from{opacity:0;transform:translateX(30px)}to{opacity:1;transform:none}}
   @keyframes slide-l{from{opacity:0;transform:translateX(-30px)}to{opacity:1;transform:none}}
   @keyframes zoom-in{from{opacity:0;transform:scale(.7)}to{opacity:1;transform:none}}
-  @keyframes pop{from{opacity:0;transform:scale(0)}to{opacity:1;transform:none}}
-  @keyframes draw{from{stroke-dashoffset:1000}to{stroke-dashoffset:0}}
 
   .slide{pointer-events:none}
   .slide.active{pointer-events:auto}
   .slide.exit-l{visibility:visible;opacity:0;transform:translateX(-56px)}
   .slide.exit-r{visibility:visible;opacity:0;transform:translateX(56px)}
 
-  /* barrido de color entre diapositivas */
   #wipe{
     position:absolute;inset:0;z-index:15;pointer-events:none;visibility:hidden;
-    background:var(--accent);clip-path:inset(0 100% 0 0);
+    background:var(--teal);clip-path:inset(0 100% 0 0);
     transition:clip-path .34s cubic-bezier(.76,0,.24,1);
   }
-  #wipe::after{content:"";position:absolute;top:0;right:0;bottom:0;width:16px;background:var(--sun)}
+  #wipe::after{content:"";position:absolute;top:0;right:0;bottom:0;width:16px;background:var(--yellow)}
   #wipe.sweep{visibility:visible;clip-path:inset(0 0 0 0)}
   #wipe.out{visibility:visible;clip-path:inset(0 0 0 100%)}
 
-  /* entrada escalonada por bloque */
-  .slide.active .kicker{animation:rise .5s cubic-bezier(.2,.8,.25,1) both .06s}
+  .slide.active .chip{animation:rise .5s cubic-bezier(.2,.8,.25,1) both .06s}
   .slide.active .title{animation:rise .55s cubic-bezier(.2,.8,.25,1) both .12s}
-  .slide.active .rule{animation:slide-l .5s cubic-bezier(.2,.8,.25,1) both .2s}
+  .slide.active .s1 .bar{animation:slide-l .5s cubic-bezier(.2,.8,.25,1) both .3s}
+  .slide.active .s1 h1{animation:rise .6s cubic-bezier(.2,.85,.3,1) both .2s}
+  .slide.active .s1 .name{animation:rise .5s cubic-bezier(.2,.8,.25,1) both .44s}
+  .slide.active .s1 .role{animation:rise .5s cubic-bezier(.2,.8,.25,1) both .52s}
+  .slide.active .s1 .meta{animation:rise .5s cubic-bezier(.2,.8,.25,1) both .6s}
+  .slide.active .s1 .chip2{animation:rise .5s cubic-bezier(.2,.8,.25,1) both .66s}
+  .slide.active .s1 .portrait{animation:zoom-in .7s cubic-bezier(.2,.9,.3,1) both .05s}
+  .slide.active .s1 .blob{animation:zoom-in .7s cubic-bezier(.2,.9,.3,1) both .05s}
+  .slide.active .s1 .stripes{animation:slide-l .55s cubic-bezier(.2,.8,.25,1) both .3s}
 
-  /* portada */
-  .slide.active.s1 .halo{animation:zoom-in .7s cubic-bezier(.2,.9,.3,1) both .05s}
-  .slide.active.s1 .halo-b{animation-delay:.16s}
-  .slide.active.s1 .halo-c{animation-delay:.24s}
-  .slide.active.s1 h1{animation:rise .6s cubic-bezier(.2,.85,.3,1) both .2s}
-  .slide.active.s1 .name{animation:rise .5s cubic-bezier(.2,.8,.25,1) both .44s}
-  .slide.active.s1 .role{animation:rise .5s cubic-bezier(.2,.8,.25,1) both .52s}
-  .slide.active.s1 .meta{animation:rise .5s cubic-bezier(.2,.8,.25,1) both .6s}
-  .slide.active.s1 .bar{animation:slide-l .55s cubic-bezier(.2,.8,.25,1) both .3s}
+  .slide.active .s2 .sub{animation:rise .5s cubic-bezier(.2,.8,.25,1) both .18s}
+  .slide.active .pills .p{animation:rise .45s cubic-bezier(.2,.8,.25,1) both}
+  .slide.active .pills .p:nth-child(1){animation-delay:.24s}
+  .slide.active .pills .p:nth-child(2){animation-delay:.30s}
+  .slide.active .pills .p:nth-child(3){animation-delay:.36s}
+  .slide.active .s2 .cards .card{animation:rise .55s cubic-bezier(.2,.8,.25,1) both}
+  .slide.active .s2 .cards .card:nth-child(1){animation-delay:.26s}
+  .slide.active .s2 .cards .card:nth-child(2){animation-delay:.33s}
+  .slide.active .s2 .cards .card:nth-child(3){animation-delay:.40s}
+  .slide.active .week{animation:rise .6s cubic-bezier(.2,.8,.25,1) both .52s}
+  .slide.active .s2 .portrait{animation:zoom-in .7s cubic-bezier(.2,.9,.3,1) both .1s}
 
-  /* tarjetas y bloques */
-  .slide.active .cards .card{animation:rise .55s cubic-bezier(.2,.8,.25,1) both}
-  .slide.active .cards .card:nth-child(1){animation-delay:.26s}
-  .slide.active .cards .card:nth-child(2){animation-delay:.33s}
-  .slide.active .cards .card:nth-child(3){animation-delay:.40s}
-  .slide.active .cards .card:nth-child(4){animation-delay:.47s}
-  .slide.active .routine{animation:rise .6s cubic-bezier(.2,.8,.25,1) both .55s}
+  .slide.active .client{animation:slide-l .55s cubic-bezier(.2,.8,.25,1) both .26s}
+  .slide.active .steps-card{animation:rise .55s cubic-bezier(.2,.8,.25,1) both .36s}
+  .slide.active .stp{animation:rise .45s cubic-bezier(.2,.8,.25,1) both}
+  .slide.active .stp:nth-of-type(1){animation-delay:.42s}
+  .slide.active .stp:nth-of-type(2){animation-delay:.48s}
+  .slide.active .stp:nth-of-type(3){animation-delay:.54s}
+  .slide.active .stp:nth-of-type(4){animation-delay:.60s}
+  .slide.active .map-card{animation:slide-r .6s cubic-bezier(.2,.8,.25,1) both .30s}
+  .slide.active .map-cap,.slide.active .km{animation:rise .5s cubic-bezier(.2,.8,.25,1) both .64s}
 
-  /* ruta + mapa */
-  .slide.active .addr{animation:slide-l .55s cubic-bezier(.2,.8,.25,1) both .26s}
-  .slide.active .steps-title{animation:rise .5s cubic-bezier(.2,.8,.25,1) both .34s}
-  .slide.active .stp:nth-child(1){animation:rise .45s cubic-bezier(.2,.8,.25,1) both .40s}
-  .slide.active .stp:nth-child(2){animation:rise .45s cubic-bezier(.2,.8,.25,1) both .46s}
-  .slide.active .stp:nth-child(3){animation:rise .45s cubic-bezier(.2,.8,.25,1) both .52s}
-  .slide.active .stp:nth-child(4){animation:rise .45s cubic-bezier(.2,.8,.25,1) both .58s}
-  .slide.active .map-wrap{animation:slide-r .6s cubic-bezier(.2,.8,.25,1) both .30s}
-  .slide.active .map-cap{animation:rise .5s cubic-bezier(.2,.8,.25,1) both .62s}
-  .route{stroke-dasharray:1000;stroke-dashoffset:1000}
-  .slide.active .route{animation:draw .95s cubic-bezier(.55,.15,.3,1) both .45s}
-  .mk1,.mk2{transform-box:fill-box;transform-origin:center}
-  .slide.active .mk1{animation:pop .4s cubic-bezier(.2,1.6,.4,1) both .35s}
-  .slide.active .mk2{animation:pop .4s cubic-bezier(.2,1.6,.4,1) both 1.25s}
-
-  /* diapositiva 4 */
-  .slide.active .row-top .card:nth-child(1){animation:rise .55s cubic-bezier(.2,.8,.25,1) both .26s}
-  .slide.active .row-top .card:nth-child(2){animation:rise .55s cubic-bezier(.2,.8,.25,1) both .34s}
-  .slide.active .safety-k{animation:rise .5s cubic-bezier(.2,.8,.25,1) both .44s}
-  .slide.active .row-bot .card:nth-child(1){animation:rise .55s cubic-bezier(.2,.8,.25,1) both .50s}
-  .slide.active .row-bot .card:nth-child(2){animation:rise .55s cubic-bezier(.2,.8,.25,1) both .57s}
-  .slide.active .row-bot .card:nth-child(3){animation:rise .55s cubic-bezier(.2,.8,.25,1) both .64s}
+  .slide.active .eat-card{animation:rise .55s cubic-bezier(.2,.8,.25,1) both .26s}
+  .slide.active .when{animation:rise .55s cubic-bezier(.2,.8,.25,1) both .34s}
+  .slide.active .safety .card{animation:rise .55s cubic-bezier(.2,.8,.25,1) both}
+  .slide.active .safety .c1{animation-delay:.48s}
+  .slide.active .safety .c2{animation-delay:.55s}
+  .slide.active .safety .c3{animation-delay:.62s}
 
   /* ---------- print to PDF ---------- */
   @page{size:13.333in 7.5in;margin:0}
@@ -301,10 +314,10 @@
     #stage{transform:none!important;box-shadow:none;border-radius:0;width:1280px;height:auto;
            overflow:hidden;background:var(--bg)}
     .slide{position:relative;opacity:1!important;visibility:visible!important;transform:none!important;
-           width:1280px;height:720px;overflow:hidden;page-break-after:always;break-after:page}
+           width:1280px;height:720px;overflow:hidden;page-break-after:always;break-after:page;
+           background:var(--bg)}
     .slide:last-of-type{page-break-after:auto;break-after:auto}
     .slide *{animation:none!important;transition:none!important}
-    .route{stroke-dasharray:none!important;stroke-dashoffset:0!important}
     #dots,#hint,#notes,#wipe{display:none!important}
   }
   @media (prefers-reduced-motion:reduce){
@@ -319,58 +332,63 @@
   <div id="stage">
 
     <!-- ============ 1 ============ -->
-    <section class="slide s1 dark active" data-notes="Good morning, everyone. My name is Davis Fernández and I am an independent IT technician. Thank you for the warm welcome. Today I am going to present my welcome kit for a new colleague from another country. I will talk about four things: who I am and what my routine is, how to get to my workplace, the places to eat near my office, and the safety rules I use when I visit clients all over Chiriquí. It will take about five minutes, and at the end you can ask me questions.">
-      <div class="halo halo-a"></div>
-      <div class="halo halo-b"></div>
-      <div class="halo halo-c"></div>
-      <div class="kicker">New team member</div>
-      <h1>Welcome to<br><span class="hl">the Team!</span></h1>
+    <section class="slide s1 active" data-notes="Good morning, everyone. My name is Davis Fernández and I am an independent IT technician. Thank you for the warm welcome. Today I am going to present my welcome kit for a new colleague from another country. I will talk about four things: who I am and what my routine is, how to get to my workplace, the places to eat near my office, and the safety rules I use when I visit clients all over Chiriquí. It will take about five minutes, and at the end you can ask me questions.">
+      <div class="blob blob-a"></div>
+      <div class="blob blob-b"></div>
+      <div class="portrait"><img src="avatar-davis.png" alt="Illustration of Davis Fernández, IT technician"></div>
+      <div class="lap"></div>
+      <div class="d1"></div>
+      <div class="d2"></div>
+      <div class="d3"></div>
+
+      <div class="chip"><span class="dot"></span>New team member</div>
+      <h1>Welcome to<br>the Team!</h1>
+      <div class="bar"></div>
       <div class="name">Davis Fernández</div>
       <div class="role">Independent IT Technician · Chiriquí</div>
       <div class="meta">David, Chiriquí · October 2026</div>
-      <div class="bar"></div>
+      <div class="chip chip2">4 sections · 5 minutes</div>
+
+      <div class="stripes"><i class="c1"></i><i class="c2"></i><i class="c3"></i><i class="c4"></i></div>
     </section>
 
     <!-- ============ 2 ============ -->
     <section class="slide s2" data-notes="Let me start by telling you about myself. My name is Davis Fernández and I am an independent IT technician. I am friendly and organized, and I am a little shy, so please be patient with me at the beginning. I do not work in one office all day: I visit clients all over Chiriquí province, and my base is in La Riviera, in David. My main client is Restaurante PikTa. My schedule is from eight in the morning to five in the afternoon, Monday to Friday. This week I am setting up a new network and I am visiting clients in Bugaba and Boquete. At eight o'clock I check my messages and I plan the visits. Then, from ten to four, I visit clients and I fix their equipment. At four thirty I update the tickets and I plan tomorrow's visits.">
-      <div class="kicker">About me</div>
-      <h2 class="title">Me, my work and my week</h2>
-      <div class="rule"></div>
+      <div class="chip"><span class="dot"></span>About me</div>
+      <h2 class="title">Hello, I'm Davis</h2>
+      <div class="sub">Independent IT technician · Chiriquí</div>
+
+      <div class="pills">
+        <span class="p"><i class="i1"></i>Friendly</span>
+        <span class="p"><i class="i2"></i>Organized</span>
+        <span class="p"><i class="i3"></i>A little shy</span>
+      </div>
 
       <div class="cards">
         <article class="card">
           <div class="badge">01</div>
           <h3>Who I am</h3>
-          <p>Friendly, organized and a little shy. I like solving problems and helping people.</p>
+          <p>I visit clients all over Chiriquí and I love solving problems.</p>
         </article>
         <article class="card">
           <div class="badge">02</div>
           <h3>Where I work</h3>
-          <p>Independent IT technician. I visit clients all over Chiriquí; my main client is PikTa.</p>
+          <p>My main client is Restaurante PikTa, in David.</p>
         </article>
         <article class="card">
           <div class="badge">03</div>
           <h3>My schedule</h3>
-          <p>I work from 8:00 a.m. to 5:00 p.m., Monday to Friday.</p>
-        </article>
-        <article class="card">
-          <div class="badge">04</div>
-          <h3>This week</h3>
-          <p>This week I am setting up a network and visiting clients in Bugaba and Boquete.</p>
+          <p>Monday to Friday<br>8:00 a.m. – 5:00 p.m.</p>
         </article>
       </div>
 
-      <div class="routine">
-        <div>
-          <div class="label">Daily routine</div>
-          <div class="hours">8:00 a.m. <b>→</b> 5:00 p.m.</div>
-        </div>
-        <div class="steps">
-          <div class="step"><div class="h">8:00</div><div class="d">Check messages and plan the visits</div></div>
-          <div class="step"><div class="h">10:00</div><div class="d">Visit clients and fix equipment</div></div>
-          <div class="step"><div class="h">4:30</div><div class="d">Update the tickets and plan tomorrow</div></div>
-        </div>
+      <div class="week">
+        <div class="k">This week</div>
+        <p>I am setting up a network and visiting clients in Bugaba and Boquete.</p>
       </div>
+
+      <div class="portrait"><img src="avatar-davis.png" alt="Illustration of Davis Fernández, IT technician"></div>
+      <div class="lap"></div>
 
       <div class="foot">Induction Project · Davis Fernández</div>
       <div class="num">02</div>
@@ -378,31 +396,29 @@
 
     <!-- ============ 3 ============ -->
     <section class="slide s3" data-notes="Now, let me tell you how to get to my workplace. My base is in La Riviera, on Calle 5, but I do not stay there all day: my main client is Restaurante PikTa, on Calle Arístides Romero, 50 meters from Julio Gato, and I also visit clients in Bugaba, Boquete and Volcán. On the map, the blue line is the route from my base to PikTa. First, I leave my base and I drive to the Romero La Riviera bus stop. From there, I go north on Carretera 48, and I continue on Avenida 8a Oeste, also called Avenida La Libertad. After that, I go straight until Calle Arístides Romero. Finally, I turn left, and PikTa is on the left, next to Hospital Chiriquí. It takes about ten minutes by car, about five kilometers. When I work in the restaurant, I park on the street behind the building. My advice is to leave early: the traffic is heavy at eight.">
-      <div class="kicker">How to get there</div>
+      <div class="chip"><span class="dot"></span>How to get there</div>
       <h2 class="title">How to get to my workplace</h2>
-      <div class="rule"></div>
 
-      <div class="col">
-        <div class="addr">
-          <div class="k">My main client · David</div>
-          <h2>Restaurante PikTa</h2>
-          <div class="street">C. Arístides Romero, David · 50 m from Julio Gato</div>
-          <div class="note">My base: La Riviera, Calle 5.</div>
-        </div>
-
-        <div class="steps-title">By car · step by step</div>
-        <div class="steps">
-          <div class="stp"><div class="n">1</div><p><strong>First,</strong> from the Romero La Riviera bus stop, go north on Carretera 48.</p></div>
-          <div class="stp"><div class="n">2</div><p><strong>Then,</strong> continue on Carretera 48 to Av. 8a Oeste.</p></div>
-          <div class="stp"><div class="n">3</div><p><strong>After that,</strong> go straight until Calle Arístides Romero.</p></div>
-          <div class="stp"><div class="n">4</div><p><strong>Finally,</strong> turn left; PikTa is on the left, next to Hospital Chiriquí.</p></div>
-        </div>
+      <div class="client">
+        <div class="k">My main client · David</div>
+        <h3>Restaurante PikTa</h3>
+        <div class="street">C. Arístides Romero · 50 m from Julio Gato</div>
+        <div class="note">My base: La Riviera, Calle 5</div>
       </div>
 
-      <div class="map-wrap">
-        <img class="map-img" src="mapa-pikta.png" alt="Google Maps screenshot: route from Urb. La Riviera to Restaurante PikTa, next to Hospital Chiriquí, in David">
+      <div class="steps-card">
+        <div class="k">By car · step by step</div>
+        <div class="stp"><div class="n">1</div><p><strong>First,</strong> from the Romero La Riviera bus stop, go north on Carretera 48.</p></div>
+        <div class="stp"><div class="n">2</div><p><strong>Then,</strong> continue on Carretera 48 to Av. 8a Oeste.</p></div>
+        <div class="stp"><div class="n">3</div><p><strong>After that,</strong> go straight until Calle Arístides Romero.</p></div>
+        <div class="stp"><div class="n">4</div><p><strong>Finally,</strong> turn left; PikTa is on the left, next to Hospital Chiriquí.</p></div>
       </div>
-      <div class="map-cap">From my base in La Riviera to PikTa · 10 minutes by car · 5 km</div>
+
+      <div class="map-card">
+        <img src="mapa-pikta.png" alt="Google Maps screenshot: route from Urb. La Riviera to Restaurante PikTa, next to Hospital Chiriquí, in David">
+      </div>
+      <div class="map-cap">From La Riviera to PikTa · about 10 minutes by car</div>
+      <div class="km">5 km</div>
 
       <div class="foot">Induction Project · Davis Fernández</div>
       <div class="num">03</div>
@@ -410,45 +426,48 @@
 
     <!-- ============ 4 ============ -->
     <section class="slide s4" data-notes="This last slide is about the office and safety. There are a lot of places to eat near my office. Panadería Don Felo is cheap: coffee, bread and fruit for about two dollars. Súper Xtra is also good: a typical lunch is rice with chicken, beans and plantain for about five dollars. Some places are expensive and many people eat at Súper Xtra, but I do not have much time, so I usually eat near the office. Yesterday I finished work and I went to dinner with my family. Tomorrow I will have a long day: I will visit three clients in David, Bugaba and Boquete. Now, safety. The emergency number is 911. I keep the first-aid kit in my car, in a red box, and I have the key. If someone is bleeding, apply pressure and call 911. Finally, three simple rules: check the car before a long trip, share your route with your family, and back up your data before every visit. Thank you very much. Do you have any questions?">
-      <div class="kicker">Around the office · Safety first</div>
+      <div class="chip"><span class="dot"></span>Around the office · Safety first</div>
       <h2 class="title">Food, family and safety</h2>
-      <div class="rule"></div>
 
-      <div class="row-top">
-        <article class="card" style="flex:5.95">
-          <div class="mini-k">Places to eat</div>
-          <div class="place">Panadería Don Felo</div>
-          <div class="place-desc">Coffee, bread and fruit for about $2.</div>
-          <div class="place">Súper Xtra</div>
-          <div class="place-desc">Rice with chicken, beans and plantain for about $5.</div>
-          <div class="quant">There aren't any restaurants inside the office building, but there are a lot of places nearby. Some are cheap and many people eat at Súper Xtra; I don't have much time.</div>
-        </article>
-        <article class="card" style="flex:5.5">
-          <div class="mini-k">Yesterday and tomorrow</div>
-          <div class="y-t">Yesterday</div>
-          <div class="y-v">I finished work and I went to dinner with my family.</div>
-          <div class="y-t">Tomorrow</div>
-          <div class="y-v" style="margin-bottom:0">I will have a long day: three clients in David, Bugaba and Boquete.</div>
-        </article>
+      <div class="eat-card">
+        <div class="k">Places to eat</div>
+        <div class="eat">
+          <div class="tag coral">DF</div>
+          <div class="eat-txt"><b>Panadería Don Felo</b><span>Coffee, bread and fruit.</span></div>
+          <div class="price">$2</div>
+        </div>
+        <div class="eat">
+          <div class="tag teal">SX</div>
+          <div class="eat-txt"><b>Súper Xtra</b><span>Rice with chicken, beans and plantain.</span></div>
+          <div class="price">$5</div>
+        </div>
+        <p class="quant">There aren't any restaurants inside the office building, but there are a lot of places nearby. Some are cheap and many people eat at Súper Xtra; I don't have much time.</p>
       </div>
 
-      <div class="safety-k">Safety first</div>
-      <div class="row-bot">
-        <article class="card" style="flex:2.55">
-          <div class="mini-k">Emergency</div>
+      <div class="when">
+        <div class="k">Yesterday and tomorrow</div>
+        <div class="yt past"><i></i>Yesterday</div>
+        <p>I finished work and I went to dinner with my family.</p>
+        <div class="yt future"><i></i>Tomorrow</div>
+        <p>I will have a long day: three clients in David, Bugaba and Boquete.</p>
+      </div>
+
+      <div class="safety">
+        <article class="card c1">
+          <div class="k">Emergency</div>
           <div class="big">911</div>
           <div class="small">Police, ambulance and fire department.</div>
         </article>
-        <article class="card" style="flex:3.95">
-          <div class="mini-k">First-aid kit</div>
-          <div class="place">In my car, in a red box</div>
+        <article class="card c2">
+          <div class="k">First-aid kit</div>
+          <div class="lead">In my car, in a red box</div>
           <div class="small">Ask me for the key. If someone is bleeding, apply pressure and call 911.</div>
         </article>
-        <article class="card" style="flex:3.73">
-          <div class="mini-k">Three simple rules</div>
-          <div class="rule-item"><span>Check the car before a long trip.</span></div>
-          <div class="rule-item"><span>Share your route with your family.</span></div>
-          <div class="rule-item" style="margin-bottom:0"><span>Back up your data before every visit.</span></div>
+        <article class="card c3">
+          <div class="k">Three simple rules</div>
+          <div class="rule"><span>Check the car before a long trip.</span></div>
+          <div class="rule"><span>Share your route with your family.</span></div>
+          <div class="rule"><span>Back up your data before every visit.</span></div>
         </article>
       </div>
 
