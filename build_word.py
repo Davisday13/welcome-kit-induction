@@ -17,29 +17,30 @@ SECTIONS = [
      "people. I do not work in one office all day: I visit clients all over Chiriqu\u00ed "
      "province, and my base is in La Riviera, in David. My main client is "
      "Restaurante PikTa, on Calle Ar\u00edstides Romero. I start work at 8:00 a.m. and I "
-     "finish at 5:00 p.m., from Monday to Friday. Every day I check my messages, I "
-     "visit clients and I update the tickets. This week I am setting up a "
+     "finish at 5:00 p.m., from Monday to Friday. Every day I check my messages, "
+     "visit clients and update tickets. This week I am setting up a "
      "network and I am visiting clients in Bugaba and Boquete."),
     ("2. How to get to my workplace",
      "My base is in La Riviera, on Calle 5, but my main workplace is "
-     "Restaurante PikTa, on Calle Ar\u00edstides Romero. From the Romero La Riviera bus "
+     "Restaurante PikTa, on Calle Ar\u00edstides Romero, 50 meters from Julio Gato. "
+     "From the Romero La Riviera bus "
      "stop, go north on Carretera 48, and continue on Avenida 8a Oeste. Go straight "
      "until Calle Ar\u00edstides Romero and turn left: PikTa is on the left, next to "
      "Hospital Chiriqu\u00ed. The map with my route is on slide 3: about ten minutes by "
      "car, about five kilometers."),
     ("3. Around the office",
-     "There are a lot of places to eat near my office. The bakery on the corner is "
-     "cheap: coffee, bread and fruit for about two dollars. At the market, a typical "
+     "There are a lot of places to eat near my office. Panader\u00eda Don Felo is "
+     "cheap: coffee, bread and fruit for about two dollars. At S\u00faper Xtra, a typical "
      "lunch is rice with chicken, beans and plantain for about five dollars. Some "
-     "places are expensive and many people eat at the market, but I don't have much "
+     "places are expensive and many people eat at S\u00faper Xtra, but I don't have much "
      "time, so I eat nearby. Yesterday I finished work and I went to "
      "dinner with my family. Tomorrow I will have a long day: I will visit three "
      "clients in David, Bugaba and Boquete."),
     ("4. Safety first",
      "The first-aid kit is in my car, in a red box, and I have the key: ask me for "
      "it. If someone is bleeding, apply pressure and call 911, the emergency number "
-     "in Panama. When I travel, I check the car before a long trip, I share my route "
-     "with my family, and I back up my data before every visit."),
+     "in Panama. When I travel, I check the car before a long trip, share my route "
+     "with my family, and back up my data before every visit."),
 ]
 
 text = " ".join(body for _, body in SECTIONS)

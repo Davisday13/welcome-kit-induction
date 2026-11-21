@@ -239,7 +239,7 @@ rect(s, M, 3.95, 1.05, 0.06, ACCENT)
 tx(s, "Davis Fern\u00e1ndez", M, 4.35, 7.0, 0.55, size=27, bold=True, color=WHITE)
 tx(s, "Independent IT Technician  \u00b7  Chiriqu\u00ed", M, 4.95, 8.0, 0.4, size=17,
    color=ACCENT)
-tx(s, "Welcome Kit  \u00b7  David, Chiriqu\u00ed  \u00b7  October 2026", M, 5.75, 8.0, 0.35,
+tx(s, "David, Chiriqu\u00ed  \u00b7  October 2026", M, 5.75, 8.0, 0.35,
    size=13, color=RGBColor(0xB8, 0xC6, 0xD4))
 notes(s, "Good morning, everyone. My name is Davis Fernández and I am an independent "
          "IT technician. Thank you for the warm welcome. Today I am going to present "
@@ -252,7 +252,7 @@ notes(s, "Good morning, everyone. My name is Davis Fernández and I am an indepe
 # ================================================================ SLIDE 2
 s = prs.slides.add_slide(BLANK)
 rect(s, 0, 0, W, H, BG)
-header(s, "About me", "This is me, my work and my week")
+header(s, "About me", "Me, my work and my week")
 
 cards = [
     ("01", "Who I am",
@@ -316,7 +316,7 @@ tx(s, "My main client \u00b7 David", M + 0.35, 2.38, 3.9, 0.3, size=10, bold=Tru
    color=ACCENT, caps=True)
 tx(s, "Restaurante PikTa", M + 0.35, 2.66, 3.85, 0.62, size=17, bold=True,
    color=WHITE, spacing=1.1)
-tx(s, "C. Ar\u00edstides Romero, David", M + 0.35, 3.3, 3.9, 0.3, size=11.5,
+tx(s, "C. Ar\u00edstides Romero, David \u00b7 50 m from Julio Gato", M + 0.35, 3.3, 3.9, 0.3, size=10.5,
    color=ACCENT)
 tx(s, "My base: La Riviera, Calle 5.", M + 0.35, 3.58, 3.9, 0.28, size=9.5,
    color=RGBColor(0xC9, 0xD5, 0xE1))
@@ -324,7 +324,7 @@ tx(s, "My base: La Riviera, Calle 5.", M + 0.35, 3.58, 3.9, 0.28, size=9.5,
 tx(s, "By car \u00b7 step by step", M, 4.12, 4.2, 0.3, size=10, bold=True, color=ACCENT,
    caps=True)
 steps = [("First,", "from the Romero La Riviera bus stop, go north on Carretera 48."),
-         ("Then,", "continue on Carretera 48 and Av. 8a Oeste."),
+         ("Then,", "continue on Carretera 48 to Av. 8a Oeste."),
          ("After that,", "go straight until Calle Ar\u00edstides Romero."),
          ("Finally,", "turn left; PikTa is on the left, next to Hospital Chiriqu\u00ed.")]
 y = 4.42
@@ -367,7 +367,8 @@ tx(s, "From my base in La Riviera to PikTa \u00b7 10 minutes by car \u00b7 5 km"
 footer(s, 3)
 notes(s, "Now, let me tell you how to get to my workplace. My base is in La Riviera, "
          "on Calle 5, but I do not stay there all day: my main client is Restaurante "
-         "PikTa, on Calle Arístides Romero, and I also visit clients in Bugaba, "
+         "PikTa, on Calle Arístides Romero, 50 meters from Julio Gato, and I also "
+         "visit clients in Bugaba, "
          "Boquete and Volcán. On the map, the blue line is the route from my base to "
          "PikTa. First, I leave my base and I drive to the Romero La Riviera bus stop. "
          "From there, I go north on Carretera 48, and I continue on Avenida 8a Oeste, "
@@ -380,19 +381,19 @@ notes(s, "Now, let me tell you how to get to my workplace. My base is in La Rivi
 # ================================================================ SLIDE 4
 s = prs.slides.add_slide(BLANK)
 rect(s, 0, 0, W, H, BG)
-header(s, "Around the office  \u00b7  Safety first", "Food, family and safety on the road")
+header(s, "Around the office  \u00b7  Safety first", "Food, family and safety")
 
 card(s, M, 2.1, 5.95, 2.2)
 tx(s, "Places to eat", M + 0.3, 2.28, 3.0, 0.28, size=10, bold=True, color=BLUE, caps=True)
-tx(s, "The bakery on the corner", M + 0.3, 2.56, 5.1, 0.32, size=15, bold=True,
+tx(s, "Panader\u00eda Don Felo", M + 0.3, 2.56, 5.1, 0.32, size=15, bold=True,
    color=NAVY)
 tx(s, "Coffee, bread and fruit for about $2.", M + 0.3, 2.86, 5.35, 0.3, size=11,
    color=MUTED)
-tx(s, "The market", M + 0.3, 3.22, 2.6, 0.32, size=15, bold=True, color=NAVY)
+tx(s, "S\u00faper Xtra", M + 0.3, 3.22, 2.6, 0.32, size=15, bold=True, color=NAVY)
 tx(s, "Rice with chicken, beans and plantain for about $5.",
    M + 0.3, 3.52, 5.35, 0.3, size=11, color=MUTED)
-tx(s, "There aren't any restaurants inside my building, but there are a lot of "
-      "places nearby. Some are cheap and many people eat at the market; I don't have "
+tx(s, "There aren't any restaurants inside the office building, but there are a lot "
+      "of places nearby. Some are cheap and many people eat at S\u00faper Xtra; I don't have "
       "much time.",
    M + 0.3, 3.83, 5.4, 0.3, size=9.5, italic=True, color=RGBColor(0x3D, 0x5A, 0x74))
 
@@ -436,10 +437,10 @@ for i, r in enumerate(rules):
 
 footer(s, 4)
 notes(s, "This last slide is about the office and safety. There are a lot of "
-         "places to eat near my office. The bakery on the corner is cheap: coffee, "
-         "bread and fruit for about two dollars. The market is also good: a typical "
+         "places to eat near my office. Panadería Don Felo is cheap: coffee, "
+         "bread and fruit for about two dollars. Súper Xtra is also good: a typical "
          "lunch is rice with chicken, beans and plantain for about five dollars. "
-         "Some places are expensive and many people eat at the market, but I do not "
+         "Some places are expensive and many people eat at Súper Xtra, but I do not "
          "have much time, so I usually eat near the office. Yesterday I finished "
          "work and I went to dinner with my family. Tomorrow I "
          "will have a long day: I will visit three clients in David, Bugaba and "
