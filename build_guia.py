@@ -66,20 +66,14 @@ r.font.color.rgb = MUTED
 
 h("1. Lo que ya est\u00e1 hecho")
 bullet("Induction_Project_Davis_Fernandez_FINAL.pptx \u2014 4 diapositivas, mapa con la "
-       "ruta y notas del orador de unas 535 palabras (4\u20135 minutos).")
-bullet("Welcome_Kit_Escrito_Davis_Fernandez.docx \u2014 parte escrita de 338 palabras "
+       "ruta y notas del orador de unas 574 palabras (4\u20135 minutos).")
+bullet("Welcome_Kit_Escrito_Davis_Fernandez.docx \u2014 parte escrita de 349 palabras "
        "(el rango pedido es 250\u2013350).")
 bullet("Esta gu\u00eda.")
 
 h("2. Datos que faltan (m\u00e1ndamelos y lo dejo cerrado)")
-bullet("Nombre completo tal como debe aparecer en la portada.")
 bullet("Direcci\u00f3n exacta de tu base en La Riviera (calle y n\u00famero de casa).")
-bullet("Confirmar la ruta: si giras en otro punto de la Calle 4 o entras por otra "
-       "calle a PikTa, dime cu\u00e1l.")
 bullet("D\u00f3nde estacionas cuando trabajas en el restaurante.")
-bullet("Los dos lugares de comida reales (ahora son \u2018the bakery on the corner\u2019 y "
-       "\u2018the market\u2019) y el precio aproximado.")
-bullet("Ciudades que cubres, para confirmar David, Bugaba, Boquete y Volc\u00e1n.")
 bullet("Extensi\u00f3n de emergencia o seguro m\u00e9dico, si quieres a\u00f1adirlo al 911.")
 bullet("Foto tuya o logo (opcional, para la portada).")
 
@@ -101,8 +95,8 @@ rows = [
     ("Vocabulario (20)", "some / any / a lot of / many / much", "Las 5"),
     ("Presentaci\u00f3n (10)", "Mapa con la ruta marcada", "Listo"),
     ("Presentaci\u00f3n (10)", "4 diapositivas organizadas", "Listo"),
-    ("Oral (20)", "4\u20135 minutos, sin leer", "Notas: ~535 palabras"),
-    ("Extensi\u00f3n", "250\u2013350 palabras escritas", "345 en PPT / 338 en Word"),
+    ("Oral (20)", "4\u20135 minutos, sin leer", "Notas: ~574 palabras"),
+    ("Extensi\u00f3n", "250\u2013350 palabras escritas", "349 en PPT / 349 en Word"),
 ]
 tb = doc.add_table(rows=1, cols=3)
 tb.style = "Light Grid Accent 1"
@@ -139,8 +133,8 @@ bullet("Semana 6 \u2014 presentaci\u00f3n oral en la sesi\u00f3n en vivo.")
 
 h("7. Antes de entregar")
 bullet("Cerrar PowerPoint para poder actualizar el archivo con los datos finales.")
-bullet("Reemplazar los tres campos entre corchetes y revisar que no quede ning\u00fan "
-       "\u2018Maria Gonzalez\u2019.")
+bullet("Revisar que la portada diga Davis Fern\u00e1ndez y que la diapositiva 2 muestre "
+       "los datos personales: 43 years old, Married, Two children.")
 bullet("Exportar una copia en PDF (Archivo > Exportar > PDF).")
 bullet("Practicar en voz alta dos veces con las notas: 4 a 5 minutos.")
 

@@ -12,14 +12,14 @@ MUTED = RGBColor(0x55, 0x69, 0x7C)
 
 SECTIONS = [
     ("1. About me",
-     "My name is Davis Fern\u00e1ndez and I am an independent IT technician. I am "
-     "friendly, organized and a little shy, but I enjoy solving problems and helping "
-     "people. I do not work in one office all day: I visit clients all over Chiriqu\u00ed "
-     "province, and my base is in La Riviera, in David. My main client is "
-     "Restaurante PikTa, on Calle Ar\u00edstides Romero. I start work at 8:00 a.m. and I "
-     "finish at 5:00 p.m., from Monday to Friday. Every day I check my messages, "
-     "visit clients and update tickets. This week I am setting up a "
-     "network and I am visiting clients in Bugaba and Boquete."),
+     "My name is Davis Fern\u00e1ndez and I am an independent IT technician. I am 43 "
+     "years old, I am married and I have two children. I am friendly, organized and a "
+     "little shy, but I enjoy solving problems and helping people. I do not work in "
+     "one office: I visit clients all over Chiriqu\u00ed, and my base is in La Riviera, "
+     "in David. My main client is Restaurante PikTa, on Calle Ar\u00edstides Romero. I "
+     "work from 8:00 a.m. to 5:00 p.m., Monday to Friday. Every day I check "
+     "messages, visit clients and update tickets. This week I am setting up a "
+     "network and visiting clients in Bugaba and Boquete."),
     ("2. How to get to my workplace",
      "My base is in La Riviera, on Calle 5, but my main workplace is "
      "Restaurante PikTa, on Calle Ar\u00edstides Romero, 50 meters from Julio Gato. "

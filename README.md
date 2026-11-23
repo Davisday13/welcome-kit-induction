@@ -28,7 +28,7 @@ color y un mapa ilustrado con la ruta perfilada en negro.
 | Diapositiva | Recursos gráficos |
 |---|---|
 | 1 · Portada | Círculo coral, círculo turquesa, triángulo amarillo, título con resaltado amarillo y barra multicolor a rayas |
-| 2 · About me | 4 tarjetas con contorno y sombra dura, badges cuadrados de color, franja de rutina en negro con sombra turquesa |
+| 2 · About me | 4 tarjetas con contorno y sombra dura, badges cuadrados de color, chips con los datos personales (43 years old · Married · Two children), franja de rutina en negro con sombra turquesa |
 | 3 · How to get there | Tarjeta negra con sombra coral, pasos numerados en 4 colores, mapa ilustrado con ruta perfilada |
 | 4 · Office & safety | Tarjetas de color pleno (coral/turquesa/negro), chips *Yesterday* / *Tomorrow*, bloque 911 gigante |
 
@@ -52,8 +52,8 @@ Atajos: `←` `→` navegar · `N` notas · `F` pantalla completa · `P` imprimi
 
 | Archivo | Qué es |
 |---|---|
-| [`Induction_Project_Davis_Fernandez_FINAL.pptx`](Induction_Project_Davis_Fernandez_FINAL.pptx) | **Entregable 1** — 4 diapositivas (16:9) con notas del orador. **348 palabras visibles**. |
-| [`Welcome_Kit_Escrito_Davis_Fernandez.docx`](Welcome_Kit_Escrito_Davis_Fernandez.docx) | **Entregable 2** — parte escrita. **345 palabras** (rango 250–350). |
+| [`Induction_Project_Davis_Fernandez_FINAL.pptx`](Induction_Project_Davis_Fernandez_FINAL.pptx) | **Entregable 1** — 4 diapositivas (16:9) con notas del orador. **349 palabras visibles**. |
+| [`Welcome_Kit_Escrito_Davis_Fernandez.docx`](Welcome_Kit_Escrito_Davis_Fernandez.docx) | **Entregable 2** — parte escrita. **349 palabras** (rango 250–350). |
 | [`Welcome_Kit_Davis_Fernandez.pdf`](Welcome_Kit_Davis_Fernandez.pdf) | **Entregable 3** — la misma presentación web exportada a PDF (4 páginas, lista para Classroom). |
 | [`mapa-pikta.png`](mapa-pikta.png) | Captura de Google Maps con la ruta de La Riviera a PikTa (la usa la web y el PPTX). |
 | [`Guia_Induction_Project.docx`](Guia_Induction_Project.docx) | Guía de calificación: checklist de la rúbrica, datos pendientes y cronometraje. |
@@ -76,8 +76,8 @@ Atajos: `←` `→` navegar · `N` notas · `F` pantalla completa · `P` imprimi
 | **Quantifiers** (*some, any, a lot of, many, much*) | *"There aren't any… but there are a lot of… Some are cheap and many people eat… I don't have much time."* (dip. 4) |
 | **Secuencia** (*First, Then, After that, Finally*) | Diapositiva 3, los 4 pasos numerados |
 | **Descripción de primeros auxilios** | Diapositiva 4: kit *in my car, in a red box* → *if someone is bleeding, apply pressure and call 911* |
-| Extensión 250–350 palabras | 346 en Word / 348 visibles en PPT |
-| Oral 4–5 minutos | 558 palabras en las notas ≈ 4,3–4,9 min |
+| Extensión 250–350 palabras | 349 en Word / 349 visibles en PPT |
+| Oral 4–5 minutos | 574 palabras en las notas ≈ 4,4–5,0 min |
 
 ## 🎤 Cronometraje del oral (4–5 min)
 
@@ -110,7 +110,7 @@ python -m http.server 8080   # y abre http://localhost:8080
 ## ✅ Checklist antes de entregar
 
 - [ ] `Induction_Project_Davis_Fernandez_FINAL.pptx` (4 diapositivas, revisar notas con `Alt+F5`)
-- [ ] `Welcome_Kit_Escrito_Davis_Fernandez.docx` (346 palabras)
+- [ ] `Welcome_Kit_Escrito_Davis_Fernandez.docx` (349 palabras)
 - [ ] `Welcome_Kit_Davis_Fernandez.pdf` (subir a Classroom si piden PDF)
 - [ ] Enlace de GitHub Pages en el comentario/entrega de Classroom
 - [ ] Ensayo cronometrado: 4–5 minutos
@@ -120,8 +120,7 @@ python -m http.server 8080   # y abre http://localhost:8080
 1. Dirección exacta de la base en La Riviera (número de casa / referencia).
 2. Confirmar el giro exacto de la ruta (hoy: Calle 5 → Calle 4 → Calle Arístides Romero).
 3. Dónde se estaciona en PikTa (ahora: *behind the building*).
-4. Nombres reales de los dos lugares de comida (hoy genéricos: *the bakery on the corner* y *the market*).
-5. Extensión interna o seguro médico (opcional, junto al 911).
+4. Extensión interna o seguro médico (opcional, junto al 911).
 
 ---
 

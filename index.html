@@ -86,7 +86,16 @@
   .s1 .meta{position:absolute;left:82px;top:556px;font-size:17px;color:#B8C6D4}
 
   /* ---------- slide 2 ---------- */
-  .cards{position:absolute;left:82px;right:82px;top:216px;display:flex;gap:19px}
+  .facts{position:absolute;left:82px;top:182px;display:flex;gap:10px}
+  .fact{
+    display:inline-flex;align-items:center;gap:8px;background:#fff;border:2px solid var(--navy);
+    border-radius:999px;padding:4px 13px 4px 11px;font-size:12px;font-weight:700;
+    color:var(--navy);box-shadow:3px 3px 0 var(--navy);
+  }
+  .fact i{display:block;width:8px;height:8px;border-radius:50%;background:var(--accent)}
+  .fact:nth-child(2) i{background:var(--teal)}
+  .fact:nth-child(3) i{background:var(--sun)}
+  .cards{position:absolute;left:82px;right:82px;top:224px;display:flex;gap:19px}
   .card{
     flex:1;background:#fff;border:2px solid var(--navy);border-radius:12px;
     padding:22px 24px;min-height:211px;box-shadow:7px 7px 0 var(--navy);
@@ -263,6 +272,10 @@
   .slide.active.s1 .bar{animation:slide-l .55s cubic-bezier(.2,.8,.25,1) both .3s}
 
   /* tarjetas y bloques */
+  .slide.active .facts .fact{animation:rise .45s cubic-bezier(.2,.8,.25,1) both}
+  .slide.active .facts .fact:nth-child(1){animation-delay:.18s}
+  .slide.active .facts .fact:nth-child(2){animation-delay:.24s}
+  .slide.active .facts .fact:nth-child(3){animation-delay:.30s}
   .slide.active .cards .card{animation:rise .55s cubic-bezier(.2,.8,.25,1) both}
   .slide.active .cards .card:nth-child(1){animation-delay:.26s}
   .slide.active .cards .card:nth-child(2){animation-delay:.33s}
@@ -332,10 +345,16 @@
     </section>
 
     <!-- ============ 2 ============ -->
-    <section class="slide s2" data-notes="Let me start by telling you about myself. My name is Davis Fernández and I am an independent IT technician. I am friendly and organized, and I am a little shy, so please be patient with me at the beginning. I do not work in one office all day: I visit clients all over Chiriquí province, and my base is in La Riviera, in David. My main client is Restaurante PikTa. My schedule is from eight in the morning to five in the afternoon, Monday to Friday. This week I am setting up a new network and I am visiting clients in Bugaba and Boquete. At eight o'clock I check my messages and I plan the visits. Then, from ten to four, I visit clients and I fix their equipment. At four thirty I update the tickets and I plan tomorrow's visits.">
+    <section class="slide s2" data-notes="Let me start by telling you about myself. My name is Davis Fernández and I am an independent IT technician. I am 43 years old, I am married and I have two children. I am friendly and organized, and I am a little shy, so please be patient with me at the beginning. I do not work in one office all day: I visit clients all over Chiriquí province, and my base is in La Riviera, in David. My main client is Restaurante PikTa. My schedule is from eight in the morning to five in the afternoon, Monday to Friday. This week I am setting up a new network and I am visiting clients in Bugaba and Boquete. At eight o'clock I check my messages and I plan the visits. Then, from ten to four, I visit clients and I fix their equipment. At four thirty I update the tickets and I plan tomorrow's visits.">
       <div class="kicker">About me</div>
       <h2 class="title">Me, my work and my week</h2>
       <div class="rule"></div>
+
+      <div class="facts">
+        <span class="fact"><i></i>43 years old</span>
+        <span class="fact"><i></i>Married</span>
+        <span class="fact"><i></i>Two children</span>
+      </div>
 
       <div class="cards">
         <article class="card">
@@ -356,7 +375,7 @@
         <article class="card">
           <div class="badge">04</div>
           <h3>This week</h3>
-          <p>This week I am setting up a network and visiting clients in Bugaba and Boquete.</p>
+          <p>This week I am setting up a network in Bugaba and Boquete.</p>
         </article>
       </div>
 

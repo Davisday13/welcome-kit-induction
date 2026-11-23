@@ -25,6 +25,7 @@ LINE = RGBColor(0xDD, 0xE5, 0xEC)
 TEXT = RGBColor(0x1B, 0x2B, 0x3A)
 MUTED = RGBColor(0x55, 0x69, 0x7C)
 WHITE = RGBColor(0xFF, 0xFF, 0xFF)
+TEAL = RGBColor(0x0F, 0xB9, 0xA6)
 
 MAP_BG = RGBColor(0xEB, 0xF0, 0xE8)
 ROAD = RGBColor(0xDC, 0xE2, 0xE7)
@@ -108,6 +109,16 @@ def circle(slide, l, t, d, fill, line=None, lw=1.0):
         shp.line.width = Pt(lw)
     shp.shadow.inherit = False
     return shp
+
+
+def chip(slide, l, t, text, dot=ACCENT, size=10.5, h=0.32):
+    """Pildora blanca con punto de color (datos personales)."""
+    w = 0.40 + len(text) * 0.078 * size / 10.5 + 0.24
+    card(slide, l, t, w, h, fill=CARD, radius=0.5, line=LINE)
+    circle(slide, l + 0.17, t + (h - 0.11) / 2, 0.11, dot)
+    tx(slide, text, l + 0.38, t, w - 0.44, h, size=size, bold=True, color=NAVY,
+       anchor=MSO_ANCHOR.MIDDLE)
+    return w
 
 
 def notes(slide, text):
@@ -254,6 +265,11 @@ s = prs.slides.add_slide(BLANK)
 rect(s, 0, 0, W, H, BG)
 header(s, "About me", "Me, my work and my week")
 
+# datos personales
+x = M
+for label, dotc in (("43 years old", ACCENT), ("Married", TEAL), ("Two children", BLUE)):
+    x += chip(s, x, 1.84, label, dot=dotc) + 0.14
+
 cards = [
     ("01", "Who I am",
      "Friendly, organized and a little shy. I like solving problems and helping "
@@ -264,8 +280,7 @@ cards = [
     ("03", "My schedule",
      "I work from 8:00 a.m. to 5:00 p.m., Monday to Friday."),
     ("04", "This week",
-     "This week I am setting up a network and visiting clients in Bugaba and "
-     "Boquete."),
+     "This week I am setting up a network in Bugaba and Boquete."),
 ]
 cw, gap = 2.82, 0.2
 for i, (num, title, body) in enumerate(cards):
@@ -296,7 +311,8 @@ for i, (hour, desc) in enumerate(steps):
 
 footer(s, 2)
 notes(s, "Let me start by telling you about myself. My name is Davis Fernández and "
-         "I am an independent IT technician. I am friendly and organized, and I am a "
+         "I am an independent IT technician. I am 43 years old, I am married and I "
+         "have two children. I am friendly and organized, and I am a "
          "little shy, so please be patient with me at the beginning. I do not work in "
          "one office all day: I visit clients all over Chiriquí province, and my base "
          "is in David. My schedule is from eight in the morning to five in the "
