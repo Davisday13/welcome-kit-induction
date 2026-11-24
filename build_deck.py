@@ -111,12 +111,13 @@ def circle(slide, l, t, d, fill, line=None, lw=1.0):
     return shp
 
 
-def chip(slide, l, t, text, dot=ACCENT, size=10.5, h=0.32):
+def chip(slide, l, t, text, dot=ACCENT, size=10.5, h=0.32, fill=CARD, line=LINE,
+         color=NAVY):
     """Pildora blanca con punto de color (datos personales)."""
     w = 0.40 + len(text) * 0.078 * size / 10.5 + 0.24
-    card(slide, l, t, w, h, fill=CARD, radius=0.5, line=LINE)
+    card(slide, l, t, w, h, fill=fill, radius=0.5, line=line)
     circle(slide, l + 0.17, t + (h - 0.11) / 2, 0.11, dot)
-    tx(slide, text, l + 0.38, t, w - 0.44, h, size=size, bold=True, color=NAVY,
+    tx(slide, text, l + 0.38, t, w - 0.44, h, size=size, bold=True, color=color,
        anchor=MSO_ANCHOR.MIDDLE)
     return w
 
@@ -250,10 +251,18 @@ rect(s, M, 3.95, 1.05, 0.06, ACCENT)
 tx(s, "Davis Fern\u00e1ndez", M, 4.35, 7.0, 0.55, size=27, bold=True, color=WHITE)
 tx(s, "Independent IT Technician  \u00b7  Chiriqu\u00ed", M, 4.95, 8.0, 0.4, size=17,
    color=ACCENT)
-tx(s, "David, Chiriqu\u00ed  \u00b7  October 2026", M, 5.75, 8.0, 0.35,
+
+# datos personales en la portada
+x = M
+for label, dotc in (("43 years old", ACCENT), ("Married", TEAL), ("Two children", BLUE)):
+    x += chip(s, x, 5.42, label, dot=dotc, size=11.5, h=0.34, fill=WHITE,
+              line=WHITE) + 0.14
+
+tx(s, "David, Chiriqu\u00ed  \u00b7  October 2026", M, 5.92, 8.0, 0.35,
    size=13, color=RGBColor(0xB8, 0xC6, 0xD4))
 notes(s, "Good morning, everyone. My name is Davis Fernández and I am an independent "
-         "IT technician. Thank you for the warm welcome. Today I am going to present "
+         "IT technician. I am 43 years old, I am married and I have two children. "
+         "Thank you for the warm welcome. Today I am going to present "
          "my welcome kit for a new colleague from another country. I will talk about "
          "four things: who I am and what my routine is, how to get to my office in "
          "David, the places to eat near my office, and the safety rules I use when I "
@@ -264,11 +273,6 @@ notes(s, "Good morning, everyone. My name is Davis Fernández and I am an indepe
 s = prs.slides.add_slide(BLANK)
 rect(s, 0, 0, W, H, BG)
 header(s, "About me", "Me, my work and my week")
-
-# datos personales
-x = M
-for label, dotc in (("43 years old", ACCENT), ("Married", TEAL), ("Two children", BLUE)):
-    x += chip(s, x, 1.84, label, dot=dotc) + 0.14
 
 cards = [
     ("01", "Who I am",
@@ -311,8 +315,7 @@ for i, (hour, desc) in enumerate(steps):
 
 footer(s, 2)
 notes(s, "Let me start by telling you about myself. My name is Davis Fernández and "
-         "I am an independent IT technician. I am 43 years old, I am married and I "
-         "have two children. I am friendly and organized, and I am a "
+         "I am an independent IT technician. I am friendly and organized, and I am a "
          "little shy, so please be patient with me at the beginning. I do not work in "
          "one office all day: I visit clients all over Chiriquí province, and my base "
          "is in David. My schedule is from eight in the morning to five in the "

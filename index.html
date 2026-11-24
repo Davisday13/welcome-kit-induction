@@ -83,19 +83,19 @@
   }
   .s1 .name{position:absolute;left:82px;top:424px;font-size:38px;font-weight:900;color:var(--white)}
   .s1 .role{position:absolute;left:82px;top:478px;font-size:24px;font-weight:600;color:var(--teal)}
-  .s1 .meta{position:absolute;left:82px;top:556px;font-size:17px;color:#B8C6D4}
+  .s1 .facts{position:absolute;left:82px;top:524px;display:flex;gap:10px}
+  .s1 .fact{
+    display:inline-flex;align-items:center;gap:8px;background:#fff;border:2px solid #fff;
+    border-radius:999px;padding:4px 13px 4px 11px;font-size:12px;font-weight:700;
+    color:var(--navy);box-shadow:3px 3px 0 rgba(255,255,255,.28);
+  }
+  .s1 .fact i{display:block;width:8px;height:8px;border-radius:50%;background:var(--accent)}
+  .s1 .fact:nth-child(2) i{background:var(--teal)}
+  .s1 .fact:nth-child(3) i{background:var(--sun)}
+  .s1 .meta{position:absolute;left:82px;top:580px;font-size:17px;color:#B8C6D4}
 
   /* ---------- slide 2 ---------- */
-  .facts{position:absolute;left:82px;top:182px;display:flex;gap:10px}
-  .fact{
-    display:inline-flex;align-items:center;gap:8px;background:#fff;border:2px solid var(--navy);
-    border-radius:999px;padding:4px 13px 4px 11px;font-size:12px;font-weight:700;
-    color:var(--navy);box-shadow:3px 3px 0 var(--navy);
-  }
-  .fact i{display:block;width:8px;height:8px;border-radius:50%;background:var(--accent)}
-  .fact:nth-child(2) i{background:var(--teal)}
-  .fact:nth-child(3) i{background:var(--sun)}
-  .cards{position:absolute;left:82px;right:82px;top:224px;display:flex;gap:19px}
+  .cards{position:absolute;left:82px;right:82px;top:216px;display:flex;gap:19px}
   .card{
     flex:1;background:#fff;border:2px solid var(--navy);border-radius:12px;
     padding:22px 24px;min-height:211px;box-shadow:7px 7px 0 var(--navy);
@@ -268,14 +268,14 @@
   .slide.active.s1 h1{animation:rise .6s cubic-bezier(.2,.85,.3,1) both .2s}
   .slide.active.s1 .name{animation:rise .5s cubic-bezier(.2,.8,.25,1) both .44s}
   .slide.active.s1 .role{animation:rise .5s cubic-bezier(.2,.8,.25,1) both .52s}
-  .slide.active.s1 .meta{animation:rise .5s cubic-bezier(.2,.8,.25,1) both .6s}
+  .slide.active.s1 .facts .fact{animation:rise .45s cubic-bezier(.2,.8,.25,1) both}
+  .slide.active.s1 .facts .fact:nth-child(1){animation-delay:.56s}
+  .slide.active.s1 .facts .fact:nth-child(2){animation-delay:.60s}
+  .slide.active.s1 .facts .fact:nth-child(3){animation-delay:.64s}
+  .slide.active.s1 .meta{animation:rise .5s cubic-bezier(.2,.8,.25,1) both .70s}
   .slide.active.s1 .bar{animation:slide-l .55s cubic-bezier(.2,.8,.25,1) both .3s}
 
   /* tarjetas y bloques */
-  .slide.active .facts .fact{animation:rise .45s cubic-bezier(.2,.8,.25,1) both}
-  .slide.active .facts .fact:nth-child(1){animation-delay:.18s}
-  .slide.active .facts .fact:nth-child(2){animation-delay:.24s}
-  .slide.active .facts .fact:nth-child(3){animation-delay:.30s}
   .slide.active .cards .card{animation:rise .55s cubic-bezier(.2,.8,.25,1) both}
   .slide.active .cards .card:nth-child(1){animation-delay:.26s}
   .slide.active .cards .card:nth-child(2){animation-delay:.33s}
@@ -332,7 +332,7 @@
   <div id="stage">
 
     <!-- ============ 1 ============ -->
-    <section class="slide s1 dark active" data-notes="Good morning, everyone. My name is Davis Fernández and I am an independent IT technician. Thank you for the warm welcome. Today I am going to present my welcome kit for a new colleague from another country. I will talk about four things: who I am and what my routine is, how to get to my workplace, the places to eat near my office, and the safety rules I use when I visit clients all over Chiriquí. It will take about five minutes, and at the end you can ask me questions.">
+    <section class="slide s1 dark active" data-notes="Good morning, everyone. My name is Davis Fernández and I am an independent IT technician. I am 43 years old, I am married and I have two children. Thank you for the warm welcome. Today I am going to present my welcome kit for a new colleague from another country. I will talk about four things: who I am and what my routine is, how to get to my workplace, the places to eat near my office, and the safety rules I use when I visit clients all over Chiriquí. It will take about five minutes, and at the end you can ask me questions.">
       <div class="halo halo-a"></div>
       <div class="halo halo-b"></div>
       <div class="halo halo-c"></div>
@@ -340,21 +340,20 @@
       <h1>Welcome to<br><span class="hl">the Team!</span></h1>
       <div class="name">Davis Fernández</div>
       <div class="role">Independent IT Technician · Chiriquí</div>
-      <div class="meta">David, Chiriquí · October 2026</div>
-      <div class="bar"></div>
-    </section>
-
-    <!-- ============ 2 ============ -->
-    <section class="slide s2" data-notes="Let me start by telling you about myself. My name is Davis Fernández and I am an independent IT technician. I am 43 years old, I am married and I have two children. I am friendly and organized, and I am a little shy, so please be patient with me at the beginning. I do not work in one office all day: I visit clients all over Chiriquí province, and my base is in La Riviera, in David. My main client is Restaurante PikTa. My schedule is from eight in the morning to five in the afternoon, Monday to Friday. This week I am setting up a new network and I am visiting clients in Bugaba and Boquete. At eight o'clock I check my messages and I plan the visits. Then, from ten to four, I visit clients and I fix their equipment. At four thirty I update the tickets and I plan tomorrow's visits.">
-      <div class="kicker">About me</div>
-      <h2 class="title">Me, my work and my week</h2>
-      <div class="rule"></div>
-
       <div class="facts">
         <span class="fact"><i></i>43 years old</span>
         <span class="fact"><i></i>Married</span>
         <span class="fact"><i></i>Two children</span>
       </div>
+      <div class="meta">David, Chiriquí · October 2026</div>
+      <div class="bar"></div>
+    </section>
+
+    <!-- ============ 2 ============ -->
+    <section class="slide s2" data-notes="Let me start by telling you about myself. My name is Davis Fernández and I am an independent IT technician. I am friendly and organized, and I am a little shy, so please be patient with me at the beginning. I do not work in one office all day: I visit clients all over Chiriquí province, and my base is in La Riviera, in David. My main client is Restaurante PikTa. My schedule is from eight in the morning to five in the afternoon, Monday to Friday. This week I am setting up a new network and I am visiting clients in Bugaba and Boquete. At eight o'clock I check my messages and I plan the visits. Then, from ten to four, I visit clients and I fix their equipment. At four thirty I update the tickets and I plan tomorrow's visits.">
+      <div class="kicker">About me</div>
+      <h2 class="title">Me, my work and my week</h2>
+      <div class="rule"></div>
 
       <div class="cards">
         <article class="card">

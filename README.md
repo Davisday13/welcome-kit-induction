@@ -27,8 +27,8 @@ color y un mapa ilustrado con la ruta perfilada en negro.
 
 | Diapositiva | Recursos gráficos |
 |---|---|
-| 1 · Portada | Círculo coral, círculo turquesa, triángulo amarillo, título con resaltado amarillo y barra multicolor a rayas |
-| 2 · About me | 4 tarjetas con contorno y sombra dura, badges cuadrados de color, chips con los datos personales (43 years old · Married · Two children), franja de rutina en negro con sombra turquesa |
+| 1 · Portada | Círculo coral, círculo turquesa, triángulo amarillo, título con resaltado amarillo, chips con los datos personales (43 years old · Married · Two children) y barra multicolor a rayas |
+| 2 · About me | 4 tarjetas con contorno y sombra dura, badges cuadrados de color, franja de rutina en negro con sombra turquesa |
 | 3 · How to get there | Tarjeta negra con sombra coral, pasos numerados en 4 colores, mapa ilustrado con ruta perfilada |
 | 4 · Office & safety | Tarjetas de color pleno (coral/turquesa/negro), chips *Yesterday* / *Tomorrow*, bloque 911 gigante |
 

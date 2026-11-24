@@ -133,8 +133,8 @@ bullet("Semana 6 \u2014 presentaci\u00f3n oral en la sesi\u00f3n en vivo.")
 
 h("7. Antes de entregar")
 bullet("Cerrar PowerPoint para poder actualizar el archivo con los datos finales.")
-bullet("Revisar que la portada diga Davis Fern\u00e1ndez y que la diapositiva 2 muestre "
-       "los datos personales: 43 years old, Married, Two children.")
+bullet("Revisar que la portada diga Davis Fern\u00e1ndez y muestre los datos personales: "
+       "43 years old, Married, Two children.")
 bullet("Exportar una copia en PDF (Archivo > Exportar > PDF).")
 bullet("Practicar en voz alta dos veces con las notas: 4 a 5 minutos.")
 
